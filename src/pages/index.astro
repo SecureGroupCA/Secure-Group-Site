@@ -28,10 +28,33 @@ const steps = [
   { n: '2', t: 'Get a clear plan and price', d: 'Same day. One hourly rate. No surprises.' },
   { n: '3', t: 'Your guard arrives', d: 'In uniform, licensed, often within 2 hours.' },
 ];
+/**
+ * Real 5-star Google reviews, copied word for word (typos kept). Collected 2026-11-16.
+ * Long reviews are shortened with "…" only — never reworded.
+ * Left out on purpose: one that mentions CCTV monitoring (we may not advertise it),
+ * one that names a client, and one-word reviews.
+ */
+const googleReviewsUrl = 'https://www.google.com/maps/search/?api=1&query=Secure+Group+Protection+Services+Inc.';
 const reviews = [
-  { text: 'They sent a guard the same night we called. Professional, on time, and the daily report was exactly what our board wanted.', who: 'Property manager, Vaughan' },
-  { text: 'We had tools going missing every weekend. Since Secure Group took over the site, nothing. The super loves the gate log.', who: 'Site superintendent, Toronto' },
-  { text: 'Last-minute event, 200 guests. Two guards, polite and sharp. Nobody even noticed them until we needed them.', who: 'Banquet hall owner, Woodbridge' },
+  { text: 'As the property manager of a busy office building in the GTA, I needed a reliable and trustworthy company for the installation of our building’s new security system and Secure Group fit the bill perfectly. … The customer service provided by Sunny and his workers was of the highest standard. They were professional and a pleasure to work with.', who: 'Michele R.' },
+  { text: 'My Dad hired their employees for theft protection at one of our properties as we had too many break ins. Their service was outstanding and we had updates of what’s going on every 30 mins. We would love to work with this company in future. Highly recommend them over other companies who ask too much for the exact same service.', who: 'Paramveer S.' },
+  { text: 'A very professional and reliable security company! I was beyond satisfied with their service and will continue to have them at future events.', who: 'Raveena R.' },
+  { text: 'Very good security service. The guard MANDEEP SINGH is a really great person and helped us a lot. Hope they hire more guards like him.', who: 'Yang H.' },
+  { text: 'SecureGroup is a very professional and reliable company. Our business needed a fire watch guard as our sprinkler system was not functional. The insurance company recommended SecureGroup security. They provided 1hr service, effective guard monitoring and real time reporting. Excellent team for the job. I highly recommend them for any type of security services needed.', who: 'Satinder D.' },
+  { text: 'Best choice for private security! Highly recommended for small to large scale events, as well as retail loss prevention.', who: 'Jonathan C.' },
+  { text: 'Hired this company last minute for a private event. Professional, courteous and timely. Jugpreet went well beyond the call of duty to ensure the safety, security, and satisfaction of all guests.', who: 'Sakaanan P.' },
+  { text: 'Great company to work with. Can easily coordinate with supervisors and management when needed last minute. Very helpful during COVID times when number of people had to be limited inside my business. 100% recommended for anyone who needs around the clock security services for any small, medium or large businesses.', who: 'Harjot G.' },
+  { text: 'Our Security guard mandeep singh is so helpful and delegent ,highly recommend', who: 'Wang Y.' },
+  { text: 'It was a pleasure working with Secure Group. I was very satisfied with their service and professionalism. Looking forward to working with them in the future!', who: 'Hajani N.' },
+  { text: 'I needed two guards for around 6 weeks for my uncle’s truck yard that was under construction. And Secure Group’s service was just phenomenal. Their mobile guards were always showing up on time, had pictures and updates sent to me every hour. I hardly visited the site until Secure Group was in-charge, you can’t ask for more.', who: 'Sanpreet S.' },
+  { text: 'Highly recommend this company for all security needs. Professional and reliable!', who: 'Kristika N.' },
+  { text: 'The best customer experience i ever had when it comes to security operations was with you guys,SECURE GROUP can simply be defined as the best of the bests when it comes to the quality of work, i would prefer your company over any when it comes to the fire watches or concierge you simply top the charts.Thanks for being there for me always.', who: 'Ammy R.' },
+  { text: 'Hired them for a private event. Very professional and excellent service. Will hire them for another event! Thanks Secure Group Protection Services', who: 'Thishanth J.' },
+  { text: 'It was a pleasure having secure group work on our property, they have really good management, excellent service, fast response service.', who: 'Ravinder M.' },
+  { text: 'I was very satisfied with the services. They were very professional and I would highly recommend.', who: 'Oviyaa B.' },
+  { text: 'Hired them on a last minute notice due to an unforeseen situation, and they were able to comply with all my specific needs. Will look forward to working with them in the future!', who: 'Ajanthan K.' },
+  { text: 'Had them for a house party and they did a great job! Guards were professional and handled every situation perfect.', who: 'Jasmeet R.' },
+  { text: 'Very professional and easy to work with ! A big thanks to everyone at The Secure Group !', who: 'Rajivan R.' },
 ];
 ---
 <Base title="Security Guard Company in Vaughan & the GTA | Secure Group Protection Services" description="Licensed security guards, mobile patrol, construction site security, condo security, alarm monitoring, fire alarm monitoring and camera installation in Vaughan and across the GTA. Call 416-751-1894." schemas={[faq(faqs)]}>
@@ -172,16 +195,17 @@ const reviews = [
     <div class="wrap">
       <p class="eyebrow">What clients say</p>
       <h2 class="mt-3">Simple words from people we protect.</h2>
-      <div class="mt-10 grid gap-5 md:grid-cols-3">
+      <p class="mt-3 text-ink-soft">Rated 4.7 out of 5 from 43 Google reviews.</p>
+      <div class="mt-10 columns-1 gap-5 md:columns-2 lg:columns-3">
         {reviews.map((r) => (
-          <figure class="card reveal">
+          <figure class="card mb-5 break-inside-avoid">
             <div class="flex gap-0.5 text-gold">{[1,2,3,4,5].map(() => <Icon name="star" class="h-4 w-4 fill-current" />)}</div>
-            <blockquote class="mt-4 font-serif text-xl leading-snug">“{r.text}”</blockquote>
-            <figcaption class="mt-4 text-sm text-ink-soft">{r.who}</figcaption>
+            <blockquote class="mt-4 font-serif text-lg leading-snug">“{r.text}”</blockquote>
+            <figcaption class="mt-4 text-sm text-ink-soft">{r.who} · Google review</figcaption>
           </figure>
         ))}
       </div>
-      <p class="mt-4 text-xs text-ink-soft">Sample reviews shown for layout. Replace with verified Google reviews before launch.</p>
+      <a href={googleReviewsUrl} rel="noopener" target="_blank" class="mt-4 inline-flex items-center gap-2 text-sm font-semibold">Read all our reviews on Google <Icon name="arrow" class="h-4 w-4" /></a>
     </div>
   </section>
 
