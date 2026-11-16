@@ -101,7 +101,7 @@ const reviews = [
       <h2 class="mt-3">Real guards. Real sites.</h2>
       <p class="mt-3 max-w-2xl text-ink-soft">These are our own guards at work across the GTA. No stock photos.</p>
       <div class="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
-        {onTheJob.slice(0, 4).map((p) => <img src={p.src} alt={p.alt} width="640" height="640" loading="lazy" class="aspect-square w-full rounded-2xl object-cover" />)}
+        {onTheJob.map((p) => <img src={p.src} alt={p.alt} width="640" height="640" loading="lazy" class="aspect-square w-full rounded-2xl object-cover" />)}
       </div>
     </div>
   </section>

@@ -1,3 +1,5 @@
+import { photos, type Photo } from './photos';
+
 export interface Sector {
   slug: string;
   name: string;
@@ -9,11 +11,13 @@ export interface Sector {
   howWeHelp: string[];
   services: string[];     // service slugs
   faqs: { q: string; a: string }[];
+  photo?: Photo;          // optional real photo shown on the sector page
 }
 
 export const sectors: Sector[] = [
   {
     slug: 'construction',
+    photo: photos.signCrane,
     name: 'Construction',
     short: 'High-rise and low-rise job sites across Vaughan and the GTA.',
     seoTitle: 'Construction Site Security Company in Vaughan & GTA | Secure Group',
@@ -32,6 +36,7 @@ export const sectors: Sector[] = [
   },
   {
     slug: 'condos-and-residential',
+    photo: photos.signCondoTower,
     name: 'Condos & Residential',
     short: 'Lobbies, garages and common areas where residents want to feel safe.',
     seoTitle: 'Condo & Residential Security Guards in Vaughan & Toronto | Secure Group',
@@ -50,6 +55,7 @@ export const sectors: Sector[] = [
   },
   {
     slug: 'property-management',
+    photo: photos.signFence,
     name: 'Property Management',
     short: 'One security partner for every building in your portfolio.',
     seoTitle: 'Security Services for Property Managers in the GTA | Secure Group',
@@ -86,6 +92,7 @@ export const sectors: Sector[] = [
   },
   {
     slug: 'industrial-and-warehouse',
+    photo: photos.patrolCarOpenLot,
     name: 'Industrial & Warehouse',
     short: 'Gates, truck yards and loading docks that run 24 hours.',
     seoTitle: 'Warehouse & Industrial Security in Vaughan, Brampton & GTA | Secure Group',
@@ -138,6 +145,7 @@ export const sectors: Sector[] = [
   },
   {
     slug: 'automotive',
+    photo: photos.patrolCarNewHomes,
     name: 'Automotive',
     short: 'Dealership lots and service bays, watched all night.',
     seoTitle: 'Car Dealership Security in Vaughan & the GTA | Secure Group',

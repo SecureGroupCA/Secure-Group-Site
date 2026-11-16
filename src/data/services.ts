@@ -58,7 +58,7 @@ export const services: Service[] = [
   },
   {
     slug: 'mobile-patrol',
-    photo: photos.patrolCars,
+    photo: photos.patrolCarField,
     group: 'guarding',
     name: 'Mobile Patrol',
     short: 'A marked patrol vehicle visits your property at random times through the night.',
@@ -281,6 +281,7 @@ export const services: Service[] = [
   },
   {
     slug: 'alarm-response',
+    photo: photos.patrolCarOpenLot,
     group: 'guarding',
     name: 'Alarm Response',
     short: 'When your alarm goes off at 3 a.m., we go so you do not have to.',

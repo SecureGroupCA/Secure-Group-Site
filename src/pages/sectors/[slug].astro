@@ -27,6 +27,7 @@ const svc = s.services.map((slug) => services.find((x) => x.slug === slug)!).fil
   <section class="section">
     <div class="wrap grid gap-14 lg:grid-cols-[1.3fr_1fr]">
       <div>
+        {s.photo && <img src={s.photo.src} alt={s.photo.alt} width="1200" height="900" loading="eager" class="mb-10 aspect-[4/3] w-full rounded-2xl object-cover" />}
         <div class="prose-plain text-lg">{s.intro.map((p) => <p>{p}</p>)}</div>
         <div class="mt-12 grid gap-8 sm:grid-cols-2">
           <div class="rounded-2xl border border-line bg-white p-7">

@@ -2,17 +2,13 @@
 import { site } from '@/data/site';
 import { services } from '@/data/services';
 import { areas } from '@/data/areas';
-import Icon from './Icon.astro';
 const year = new Date().getFullYear();
 ---
 <footer class="bg-ink text-paper">
   <div class="wrap py-16 lg:py-20">
     <div class="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
       <div>
-        <div class="flex items-center gap-3">
-          <span class="grid h-9 w-9 place-items-center rounded-lg bg-paper text-ink"><Icon name="shield" class="h-5 w-5" /></span>
-          <span class="font-serif text-xl">Secure Group</span>
-        </div>
+        <img src="/images/logo-white.png" alt={`${site.name} logo`} width="587" height="365" loading="lazy" class="h-16 w-auto" />
         <p class="mt-5 max-w-sm text-sm leading-relaxed text-paper/70">Licensed security guards, patrols and monitoring for Vaughan and the GTA. Since {site.founded}.</p>
         <div class="mt-6 space-y-2 text-sm">
           <p><a href={site.phoneHref} class="font-semibold hover:text-gold">{site.phone}</a> <span class="text-paper/50">· {site.hours}</span></p>

@@ -11,7 +11,7 @@ export const organization = () => ({
   email: site.email,
   foundingDate: String(site.founded),
   image: `${site.url}/og.png`,
-  logo: `${site.url}/favicon.svg`,
+  logo: `${site.url}/images/logo-black.png`,
   address: {
     '@type': 'PostalAddress',
     streetAddress: site.address.street,
