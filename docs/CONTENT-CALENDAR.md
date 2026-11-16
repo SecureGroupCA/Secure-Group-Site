@@ -5,7 +5,7 @@ Mark done with the date. First three are written.
 
 | Wk | Date | Title | Category | Sells | Done |
 |---|---|---|---|---|---|
-| 1 | 2026-11-17 | How much does a security guard cost in Ontario? (2026 prices explained) | Prices | security-guards | ✅ 2026-11-16 |
+| 1 | 2026-11-17 | How much does a security guard cost in Ontario? (2026 prices explained) | Prices | security-guards | ❌ Removed 2026-11-16 (owner does not want prices shown; old URL redirects to /services/security-guards) |
 | 1 | 2026-11-20 | How to check if a security company is licensed in Ontario (3-minute guide) | Hiring a company | security-guards | ✅ 2026-11-16 |
 | 2 | 2026-11-24 | How to become a security guard in Ontario (step by step) | Careers | security-guards | ✅ 2026-11-16 |
 | 2 | 2026-11-27 | Construction site security in Vaughan: what a site super actually needs | Construction | construction-site-security | ☐ |
@@ -36,4 +36,6 @@ Mark done with the date. First three are written.
 | 15 | 2027-03-02 | Executive protection: who actually uses it in the GTA | Hiring a company | investigations | ☐ |
 | 15 | 2027-03-05 | Security guard company in Vaughan: how to pick the right one | Local | security-guards | ☐ |
 
-After week 15: one post a week. Refresh the Prices post every January.
+After week 15: one post a week.
+
+Note: the owner removed the price guide post on 2026-11-16. Do not publish dollar figures for our services in any post. Check with the owner before writing the other "Prices" posts (weeks 3 and 9).

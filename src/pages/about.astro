@@ -30,7 +30,7 @@ const values = [
         <div class="card">
           <p class="eyebrow">Licence and insurance</p>
           <ul class="mt-4 space-y-3 text-[0.97rem]">
-            <li class="flex items-start gap-3"><Icon name="check" class="mt-1 h-5 w-5 shrink-0 text-gold" /><span>Licensed security guard and private investigator agency (Ontario PSISA)</span></li>
+            <li class="flex items-start gap-3"><Icon name="check" class="mt-1 h-5 w-5 shrink-0 text-gold" /><span>Licensed security guard and private investigator agency (Ontario PSISA){site.licence.verified && <> — licence #{site.licence.number}</>}</span></li>
             <li class="flex items-start gap-3"><Icon name="check" class="mt-1 h-5 w-5 shrink-0 text-gold" /><span>{site.insurance}</span></li>
             <li class="flex items-start gap-3"><Icon name="check" class="mt-1 h-5 w-5 shrink-0 text-gold" /><span>Every guard holds a valid Ontario licence. <a href="https://www.ontario.ca/page/private-security-and-investigative-services" rel="noopener" target="_blank" class="underline decoration-gold underline-offset-4">Check any licence here</a>.</span></li>
           </ul>

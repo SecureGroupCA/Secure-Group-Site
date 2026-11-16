@@ -18,7 +18,15 @@ const year = new Date().getFullYear();
           <p><a href={site.phoneHref} class="font-semibold hover:text-gold">{site.phone}</a> <span class="text-paper/50">· {site.hours}</span></p>
           <p><a href={`mailto:${site.email}`} class="hover:text-gold">{site.email}</a></p>
           <p class="text-paper/70">{site.address.street}, {site.address.city}, {site.address.province} {site.address.postal}</p>
+          {site.licence.verified && <p class="text-paper/70">PSISA agency licence #{site.licence.number}</p>}
         </div>
+        {(site.social.instagram || site.social.linkedin || site.social.facebook) && (
+          <p class="mt-5 flex gap-5 text-sm">
+            {site.social.instagram && <a href={site.social.instagram} rel="noopener" target="_blank" class="text-paper/75 hover:text-gold">Instagram</a>}
+            {site.social.linkedin && <a href={site.social.linkedin} rel="noopener" target="_blank" class="text-paper/75 hover:text-gold">LinkedIn</a>}
+            {site.social.facebook && <a href={site.social.facebook} rel="noopener" target="_blank" class="text-paper/75 hover:text-gold">Facebook</a>}
+          </p>
+        )}
       </div>
       <nav aria-label="Services">
         <p class="eyebrow !text-gold">Services</p>

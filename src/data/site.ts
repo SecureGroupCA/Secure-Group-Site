@@ -17,17 +17,18 @@ export const site = {
   geo: { lat: 43.7906, lng: -79.5547 },
   founded: 2014,
   hours: 'Open 24 hours, 7 days a week',
-  /** TODO from client: PSISA agency licence number, then set verified: true */
-  licence: { number: 'PSISA Agency Licence # on file', verified: false },
-  insurance: 'Fully insured with general liability coverage',
-  /** TODO from client: ULC licence number for the monitoring station, then set verified: true */
-  ulc: { number: 'ULC-XXXXXX', verified: false },
+  /** PSISA agency licence number, confirmed by the owner 2026-11-16 */
+  licence: { number: '1190623', verified: true },
+  insurance: 'Fully insured with $10 million general liability coverage',
+  /** ULC licence number for the monitoring station, confirmed by the owner 2026-11-16 */
+  ulc: { number: '17515', verified: true },
   serviceArea: 'Vaughan, Toronto, Mississauga, Brampton, Markham, Richmond Hill and Bradford',
   url: 'https://secure-group.ca',
   responseTime: 'Guards on site in as little as 2 hours',
   social: {
     facebook: '',
-    instagram: '',
+    instagram: 'https://www.instagram.com/securegroup/',
+    /** TODO from client: full LinkedIn company page URL */
     linkedin: '',
     google: '',
   },
