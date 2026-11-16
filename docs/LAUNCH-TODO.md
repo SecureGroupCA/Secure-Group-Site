@@ -14,3 +14,5 @@
 | 10 | Kill/update old Scarborough listing on Yellow Pages (11-380 Tapscott Rd) | Yellow Pages, Bing, Apple Maps | ☐ |
 | 11 | An OG image (1200×630) for social sharing | `public/og.png` | ☐ |
 | 12 | Netlify Forms notification email set | Netlify dashboard | ☐ |
+| 13 | Monitoring station details: name of the station, any ULC listing, and the exact wording allowed on the fire alarm monitoring page | `src/data/services.ts` → fire-alarm-monitoring, alarm-monitoring | ☐ |
+| 14 | Confirm camera installation starting price ("around $1,500 for 4 cameras") | `src/data/services.ts` → camera-installation | ☐ |

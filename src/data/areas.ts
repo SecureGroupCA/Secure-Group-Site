@@ -36,7 +36,7 @@ export const areas: Area[] = [
       'New subdivisions in Kleinburg, Vellore Village and Maple mean active construction sites that need weekend coverage.',
       'Car theft is a known problem across York Region. Dealerships along Highway 7 and Jane Street use our overnight patrols.',
     ],
-    topServices: ['security-guards', 'construction-site-security', 'mobile-patrol', 'condo-security', 'video-monitoring', 'alarm-response'],
+    topServices: ['security-guards', 'construction-site-security', 'mobile-patrol', 'condo-security', 'alarm-monitoring', 'camera-installation'],
     topSectors: ['industrial-and-warehouse', 'construction', 'condos-and-residential', 'automotive', 'retail', 'property-management'],
     faqs: [
       { q: 'Where is your Vaughan office?', a: '90 Winges Rd, Suite 206, in Woodbridge, just off Highway 7 and Weston Rd.' },
@@ -63,7 +63,7 @@ export const areas: Area[] = [
       'Condo towers in City Centre and Port Credit need front-desk guards who are good with residents.',
       'Plazas along Dundas and Hurontario use mobile patrol to cover parking lots after dark.',
     ],
-    topServices: ['security-guards', 'mobile-patrol', 'video-monitoring', 'condo-security', 'alarm-response'],
+    topServices: ['security-guards', 'mobile-patrol', 'camera-installation', 'condo-security', 'alarm-response'],
     topSectors: ['industrial-and-warehouse', 'condos-and-residential', 'retail', 'construction', 'property-management'],
     faqs: [
       { q: 'Do you have guards near the airport?', a: 'Yes. The Malton and Airport Corporate Centre area is one of our regular patrol zones.' },
@@ -84,15 +84,15 @@ export const areas: Area[] = [
     ],
     neighbourhoods: ['Bradford', 'Bond Head', 'Green Valley', 'Highway 400 Employment Lands', 'Holland Marsh', 'Dissette Street corridor'],
     localNotes: [
-      'Active subdivision construction means job sites that need weekend guards and camera towers.',
+      'Active subdivision construction means job sites that need weekend guards and cameras.',
       'Farm equipment and fuel theft in the Holland Marsh area is a real concern. Mobile patrol helps.',
       'New warehouses along the 400 need gate guards and overnight monitoring.',
     ],
-    topServices: ['construction-site-security', 'mobile-patrol', 'security-guards', 'video-monitoring'],
+    topServices: ['construction-site-security', 'mobile-patrol', 'security-guards', 'camera-installation'],
     topSectors: ['construction', 'industrial-and-warehouse', 'retail', 'property-management'],
     faqs: [
       { q: 'Do you really come out to Bradford?', a: 'Yes. Bradford is about 30 minutes up Highway 400 from our office. We have regular clients there.' },
-      { q: 'Can you guard a farm property?', a: 'Yes. Mobile patrol and camera towers work well for farms and rural yards.' },
+      { q: 'Can you guard a farm property?', a: 'Yes. Mobile patrol, cameras and a monitored alarm work well for farms and rural yards.' },
     ],
     responseTime: 'Same day for planned work',
   },
@@ -130,7 +130,7 @@ export const areas: Area[] = [
     h1: 'Security guards in Brampton',
     intro: [
       'Brampton is the trucking capital of Ontario. Truck yards, cross-docks and warehouses are everywhere, and so is cargo theft.',
-      'We put guards at the gate, patrol the yard and watch the cameras so your trailers stay where you left them.',
+      'We put guards at the gate, patrol the yard and install cameras so your trailers stay where you left them.',
     ],
     neighbourhoods: ['Bramalea', 'Steeles Avenue corridor', 'Highway 410 industrial', 'Downtown Brampton', 'Springdale', 'Mount Pleasant', 'Castlemore', 'Heart Lake'],
     localNotes: [
@@ -138,7 +138,7 @@ export const areas: Area[] = [
       'Gate guards who log every truck and seal number make a real difference.',
       'New subdivisions in Mount Pleasant and Castlemore need construction site coverage.',
     ],
-    topServices: ['security-guards', 'mobile-patrol', 'video-monitoring', 'construction-site-security'],
+    topServices: ['security-guards', 'mobile-patrol', 'camera-installation', 'construction-site-security'],
     topSectors: ['industrial-and-warehouse', 'construction', 'retail', 'automotive'],
     faqs: [
       { q: 'Can you guard a truck yard overnight?', a: 'Yes. Overnight gate guards and yard patrols are our most common Brampton service.' },

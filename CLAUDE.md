@@ -7,11 +7,12 @@ Static Astro site for secure-group.ca. Hosted on Netlify. No CMS, no database. C
 - **Positive tone.** Facts about risk are fine. Fear-mongering and scolding are not.
 - **Vaughan first.** Vaughan is the main city we want to rank in. Mention Vaughan naturally in posts. Mississauga and Bradford come next.
 - **Never invent facts** about the company (licence numbers, client names, review quotes, years). Placeholders are marked in `src/data/site.ts` and on the home page.
+- **Never advertise camera monitoring or video monitoring.** The company is not allowed to. Cameras = installation only (homes and businesses). Alarm monitoring (burglar) and fire alarm monitoring are fine and should be promoted.
 - Keep the design minimal: black, warm white, gold accent. No sliders, no stock-photo clutter, no page builders.
 
 ## Where things live
 - `src/data/site.ts` — phone, address, hours, licence. Change once, updates everywhere.
-- `src/data/services.ts` — the 8 service pages.
+- `src/data/services.ts` — the 10 service pages (7 guarding, 3 systems: alarm monitoring, fire alarm monitoring, camera installation).
 - `src/data/sectors.ts` — the 10 "who we protect" pages.
 - `src/data/areas.ts` — the 7 city pages (Vaughan is `primary: true`).
 - `src/content/blog/*.md` — blog posts. One Markdown file = one post.
@@ -27,7 +28,7 @@ Static Astro site for secure-group.ca. Hosted on Netlify. No CMS, no database. C
 5. Run `npm run build`. Fix any error. Commit and push. Netlify deploys on push.
 6. Mark the post done in `docs/CONTENT-CALENDAR.md` with the date.
 
-Categories allowed: Prices, Hiring a company, Construction, Condos, Retail, Warehouses, Cameras, Careers, Local.
+Categories allowed: Prices, Hiring a company, Construction, Condos, Retail, Warehouses, Cameras, Alarms, Careers, Local.
 
 ## Commands
 - `npm run dev` — local preview at http://localhost:4321

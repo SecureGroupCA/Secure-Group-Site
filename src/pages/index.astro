@@ -8,6 +8,8 @@ import CtaBand from '@/components/CtaBand.astro';
 import QuoteForm from '@/components/QuoteForm.astro';
 import { site } from '@/data/site';
 import { services } from '@/data/services';
+const guarding = services.filter((s) => s.group === 'guarding').slice(0, 6);
+const systems = services.filter((s) => s.group === 'systems');
 import { sectors } from '@/data/sectors';
 import { areas } from '@/data/areas';
 import { faq } from '@/lib/schema';
@@ -18,6 +20,8 @@ const faqs = [
   { q: 'How much does a security guard cost?', a: 'Most guard work in the GTA is $25 to $45 per hour. The price depends on the site, the hours and the training needed. We give one clear hourly rate with no hidden fees.' },
   { q: 'Do I have to sign a long contract?', a: 'No. You can book one shift, one weekend or a long-term post. Many clients start small and grow.' },
   { q: 'Which cities do you cover?', a: `${site.serviceArea}. Our office is in Vaughan.` },
+  { q: 'Do you install cameras at homes?', a: 'Yes. We install security cameras for houses, condos and businesses. You watch them on your phone.' },
+  { q: 'Do you monitor alarms?', a: 'Yes. Burglar alarms and fire alarms are connected to a 24-hour monitoring station. When one trips, help is sent.' },
 ];
 const steps = [
   { n: '1', t: 'Call or send a quote request', d: 'Tell us the address, the hours, and what worries you.' },
@@ -30,7 +34,7 @@ const reviews = [
   { text: 'Last-minute event, 200 guests. Two guards, polite and sharp. Nobody even noticed them until we needed them.', who: 'Banquet hall owner, Woodbridge' },
 ];
 ---
-<Base title="Security Guard Company in Vaughan & the GTA | Secure Group Protection Services" description="Licensed security guards, mobile patrol, construction site security, condo security and live video monitoring in Vaughan and across the GTA. On site in as little as 2 hours. Call 416-751-1894." schemas={[faq(faqs)]}>
+<Base title="Security Guard Company in Vaughan & the GTA | Secure Group Protection Services" description="Licensed security guards, mobile patrol, construction site security, condo security, alarm monitoring, fire alarm monitoring and camera installation in Vaughan and across the GTA. Call 416-751-1894." schemas={[faq(faqs)]}>
 
   <!-- Hero -->
   <section class="relative overflow-hidden bg-ink text-paper">
@@ -66,18 +70,43 @@ const reviews = [
   <!-- Trust -->
   <section class="wrap -mt-8 relative z-10 lg:-mt-10"><TrustStrip /></section>
 
-  <!-- Services -->
+  <!-- Services: guarding -->
   <section class="section">
     <div class="wrap">
       <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
         <div>
-          <p class="eyebrow">What we do</p>
-          <h2 class="mt-3">Pick the help you need.</h2>
+          <p class="eyebrow">Guards and patrols</p>
+          <h2 class="mt-3">People on site. This is what we do best.</h2>
         </div>
         <p class="max-w-md text-ink-soft">Not sure which one? Call us. We will tell you honestly what fits, even if it is the cheaper option.</p>
       </div>
-      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {services.map((s) => <ServiceCard href={`/services/${s.slug}`} name={s.name} short={s.short} icon={s.icon} />)}
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {guarding.map((s) => <ServiceCard href={`/services/${s.slug}`} name={s.name} short={s.short} icon={s.icon} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- Services: systems -->
+  <section class="section pt-0">
+    <div class="wrap">
+      <div class="rounded-3xl bg-ink px-6 py-10 text-paper lg:px-12 lg:py-14">
+        <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p class="eyebrow !text-gold">Alarms and cameras</p>
+            <h2 class="mt-3">Protection that works when nobody is there.</h2>
+          </div>
+          <p class="max-w-md text-paper/70">Monitored alarms and installed cameras for homes and businesses. One company for the people and the systems.</p>
+        </div>
+        <div class="mt-10 grid gap-5 sm:grid-cols-3">
+          {systems.map((s) => (
+            <a href={`/services/${s.slug}`} class="group flex flex-col gap-4 rounded-2xl border border-paper/10 bg-paper/[0.04] p-7 transition-colors hover:border-gold/60 reveal">
+              <span class="grid h-11 w-11 place-items-center rounded-full bg-paper/10 text-gold"><Icon name={s.icon} class="h-5 w-5" /></span>
+              <h3 class="text-[1.3rem]">{s.name}</h3>
+              <p class="text-[0.97rem] text-paper/70">{s.short}</p>
+              <span class="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-gold">Learn more <Icon name="arrow" class="h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   </section>

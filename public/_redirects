@@ -2,8 +2,8 @@
 /security-specialist                  /services/security-guards            301
 /intrusion-safety-service/            /services/alarm-response             301
 /intrusion-safety-service             /services/alarm-response             301
-/surveillance-cameras-live-monitoring/ /services/video-monitoring          301
-/surveillance-cameras-live-monitoring  /services/video-monitoring          301
+/surveillance-cameras-live-monitoring/ /services/camera-installation          301
+/surveillance-cameras-live-monitoring  /services/camera-installation          301
 /investigation-executive-protections/ /services/investigations             301
 /investigation-executive-protections  /services/investigations             301
 /cleaning-destruction-clean-up/       /services/clean-up                   301

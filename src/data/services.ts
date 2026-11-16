@@ -1,6 +1,7 @@
 export interface Service {
   slug: string;
   name: string;
+  group: 'guarding' | 'systems';  // home page section
   short: string;           // one line, grade-5 English
   icon: string;            // simple emoji-free SVG path key
   seoTitle: string;
@@ -16,6 +17,7 @@ export interface Service {
 export const services: Service[] = [
   {
     slug: 'security-guards',
+    group: 'guarding',
     name: 'Security Guards',
     short: 'A trained, licensed guard at your door, lobby, gate or site. Any shift, any day.',
     icon: 'shield',
@@ -52,6 +54,7 @@ export const services: Service[] = [
   },
   {
     slug: 'mobile-patrol',
+    group: 'guarding',
     name: 'Mobile Patrol',
     short: 'A marked patrol vehicle visits your property at random times through the night.',
     icon: 'car',
@@ -87,21 +90,22 @@ export const services: Service[] = [
   },
   {
     slug: 'construction-site-security',
+    group: 'guarding',
     name: 'Construction Site Security',
     short: 'Guards and cameras that stop theft, trespassing and vandalism on your job site.',
     icon: 'crane',
     seoTitle: 'Construction Site Security in Vaughan & Toronto | Secure Group',
     description:
-      'Construction site security guards, gate control and solar camera towers for high-rise and low-rise builds across Vaughan and the GTA. Stop tool theft and trespassing. Call 416-751-1894.',
+      'Construction site security guards, gate control, night patrols and camera installation for high-rise and low-rise builds across Vaughan and the GTA. Stop tool theft and trespassing. Call 416-751-1894.',
     intro: [
       'Job sites are a top target for theft. Copper, tools, and equipment go missing at night and on weekends. Trespassers get hurt and the builder gets sued.',
       'We have protected construction sites across Vaughan and the GTA since 2014. We know how gates, trades, deliveries and inspections work.',
-      'You get a guard who controls the gate by day and patrols by night, plus cameras that watch the whole site when nobody is there.',
+      'You get a guard who controls the gate by day and patrols by night. We can also install cameras so you can see the whole site from your phone.',
     ],
     whatYouGet: [
       'Gate control and visitor sign-in',
       'Night and weekend patrols',
-      'Solar camera towers with live monitoring',
+      'Camera installation so you can view the site on your phone',
       'Fire watch during hot work',
       'Daily site report with photos',
       'Guards trained on site safety rules',
@@ -116,12 +120,13 @@ export const services: Service[] = [
     faqs: [
       { q: 'Do you offer fire watch?', a: 'Yes. Our guards can perform fire watch when sprinklers are down or during hot work, with a log that meets insurance needs.' },
       { q: 'Can you cover a site for just one weekend?', a: 'Yes. Short bookings are common on job sites. Call us and we will set it up.' },
-      { q: 'Is a camera tower better than a guard?', a: 'Both have a place. Cameras cover a big area for less money. A guard can stop a person at the gate. Many sites use a guard by day and cameras by night.' },
+      { q: 'Should I get cameras or a guard?', a: 'Both have a place. Cameras record what happens and let you check the site from your phone. A guard can stop a person at the gate. Many sites use a guard by day and recorded cameras at night.' },
     ],
-    priceNote: 'Many builders combine a day guard with night cameras to lower the monthly cost.',
+    priceNote: 'Many builders combine a day guard with night patrols to lower the monthly cost.',
   },
   {
     slug: 'condo-security',
+    group: 'guarding',
     name: 'Condo & Building Security',
     short: 'Friendly, professional guards for your lobby, parking garage and common areas.',
     icon: 'building',
@@ -156,42 +161,118 @@ export const services: Service[] = [
     priceNote: 'Condo posts are usually priced per hour for a set weekly schedule, which keeps the monthly cost steady.',
   },
   {
-    slug: 'video-monitoring',
-    name: 'Cameras & Live Video Monitoring',
-    short: 'Cameras watched by a real person, 24 hours a day. They speak, they call, they act.',
-    icon: 'camera',
-    seoTitle: 'Live Video Monitoring & CCTV in Vaughan & GTA | Secure Group',
+    slug: 'alarm-monitoring',
+    name: 'Alarm Monitoring',
+    group: 'systems',
+    short: 'Your burglar alarm is watched 24 hours a day. If it trips, help is sent.',
+    icon: 'bell',
+    seoTitle: 'Burglar Alarm Monitoring in Vaughan & the GTA | Secure Group',
     description:
-      'Camera installation and live video monitoring for businesses in Vaughan and the GTA. Trained operators watch your site 24/7, speak through loudspeakers and dispatch guards. Call 416-751-1894.',
+      '24-hour burglar alarm monitoring for homes and businesses in Vaughan and the GTA. When your alarm trips, the monitoring station calls you and sends help. Call 416-751-1894.',
     intro: [
-      'Cameras that only record tell you what happened after it is too late. Cameras that are watched can stop it while it is happening.',
-      'Our operators watch your cameras in real time. If someone enters after hours, the operator speaks through a loudspeaker, calls you, and sends a patrol or the police.',
-      'We install the cameras, set up the monitoring, and keep it running.',
+      'An alarm that only makes noise is not enough. Someone has to hear it and act.',
+      'With alarm monitoring, your burglar alarm is connected to a monitoring station that is staffed 24 hours a day. When the alarm trips, the station calls you, calls the police, or sends our guard, depending on the plan you choose.',
+      'We can monitor most existing alarm panels, or install a new one.',
     ],
     whatYouGet: [
-      'Camera design and installation',
-      'Live monitoring by trained operators',
-      'Two-way voice warnings through speakers',
-      'Video analytics that spot people and vehicles',
-      'Patrol or police dispatch when needed',
-      'Video clips sent to you for every event',
+      '24-hour monitoring station',
+      'Phone call to you the moment the alarm trips',
+      'Police or guard dispatch, your choice',
+      'Works with most existing alarm panels',
+      'New panel and sensor installation if you need it',
+      'Low monthly fee, no long contract',
     ],
-    goodFor: ['Construction sites', 'Truck yards', 'Car lots', 'Warehouses', 'Retail plazas', 'Vacant properties'],
+    goodFor: ['Homes', 'Retail stores', 'Offices', 'Warehouses', 'Restaurants', 'Clinics'],
     howItWorks: [
-      { step: 'Site review', text: 'We map blind spots and pick camera spots.' },
-      { step: 'Install', text: 'Wired, wireless or solar towers. Usually done in a day.' },
-      { step: 'Monitoring starts', text: 'Operators watch during the hours you choose.' },
-      { step: 'Events handled', text: 'Voice warning, call to you, patrol dispatch. Every event recorded.' },
+      { step: 'We check your panel', text: 'Most alarm systems can connect to our station. If yours cannot, we install one that can.' },
+      { step: 'Pick your call list', text: 'Who gets called first, second and third. Police, you, or our guard.' },
+      { step: 'Monitoring starts', text: 'Your alarm is watched 24 hours a day, every day.' },
+      { step: 'Alarm trips, help goes', text: 'The station calls and dispatches within seconds.' },
     ],
     faqs: [
-      { q: 'Can video monitoring replace a guard?', a: 'Sometimes. For a large empty site at night, monitored cameras often cost less and cover more ground. For a busy lobby or a gate with people coming and going, a guard is still the best answer. We will tell you honestly which one fits.' },
-      { q: 'Do you monitor cameras I already own?', a: 'Often yes. We check if your system can connect to our monitoring centre.' },
-      { q: 'What happens when the operator sees someone?', a: 'They speak through the speaker, call your contact, and dispatch our patrol or the police based on the plan you set.' },
+      { q: 'Can you monitor the alarm I already have?', a: 'Most of the time, yes. We check your panel and tell you. If it is too old, we replace it.' },
+      { q: 'How much does alarm monitoring cost?', a: 'A small monthly fee. Call us and we will give you the exact number for your system.' },
+      { q: 'What happens on a false alarm?', a: 'The station calls you first. If you say it is a false alarm and give your password, nothing else happens.' },
+      { q: 'Can a guard come instead of police?', a: 'Yes. Many clients pick our guard as the first response. See our alarm response service.' },
     ],
-    priceNote: 'Monitoring is priced per month per site. Camera installation is quoted after a site review.',
+    priceNote: 'Alarm monitoring is a flat monthly fee. Installation of a new panel is quoted after a short visit.',
+  },
+  {
+    slug: 'fire-alarm-monitoring',
+    name: 'Fire Alarm Monitoring',
+    group: 'systems',
+    short: 'Your fire alarm is connected to a station that calls the fire department fast.',
+    icon: 'flame',
+    seoTitle: 'Fire Alarm Monitoring for Buildings in Vaughan & the GTA | Secure Group',
+    description:
+      'Fire alarm monitoring for commercial buildings, condos, plazas and warehouses in Vaughan and the GTA. The station sends the fire department the moment your alarm trips. Call 416-751-1894.',
+    intro: [
+      'Many commercial buildings in Ontario must have their fire alarm connected to a monitoring station. It is in the Fire Code, and your insurer will ask about it.',
+      'When your fire alarm trips, the station sees it right away and calls the fire department. Nobody has to be in the building for help to come.',
+      'We also report trouble signals, so a fault in the system is fixed before it matters.',
+    ],
+    whatYouGet: [
+      '24-hour fire alarm monitoring station',
+      'Fire department dispatched on an alarm signal',
+      'Trouble and supervisory signals reported to you',
+      'Monitoring records for your fire inspector and insurer',
+      'Works with most fire alarm panels',
+      'Set-up handled with your fire alarm technician',
+    ],
+    goodFor: ['Condo and apartment buildings', 'Plazas and retail', 'Warehouses and plants', 'Office buildings', 'Restaurants', 'Schools, churches and care homes'],
+    howItWorks: [
+      { step: 'We review your panel', text: 'We confirm your fire alarm can send signals to our station.' },
+      { step: 'Connection set up', text: 'Done with your fire alarm technician so nothing in the system is disturbed.' },
+      { step: 'Test and go live', text: 'We test every signal type before monitoring starts.' },
+      { step: 'Records for inspections', text: 'You get a monitoring certificate and signal records when you need them.' },
+    ],
+    faqs: [
+      { q: 'Is fire alarm monitoring required?', a: 'For many commercial and multi-unit buildings in Ontario, yes. Your fire inspector or insurer can confirm what your building needs. We are glad to help you check.' },
+      { q: 'Can you monitor a fire alarm and a burglar alarm together?', a: 'Yes. Many buildings put both on one monitoring account.' },
+      { q: 'Do you provide a monitoring certificate?', a: 'Yes. We provide the paperwork your fire inspector and insurer ask for.' },
+    ],
+    priceNote: 'Fire alarm monitoring is a flat monthly fee per building.',
+  },
+  {
+    slug: 'camera-installation',
+    name: 'Camera Installation',
+    group: 'systems',
+    short: 'Security cameras for your home or business, installed right, viewable on your phone.',
+    icon: 'camera',
+    seoTitle: 'Security Camera Installation for Homes & Businesses in Vaughan & GTA | Secure Group',
+    description:
+      'Professional security camera installation for homes and businesses in Vaughan and the GTA. Clear 4K video, night vision, and viewing on your phone. Call 416-751-1894 for a quote.',
+    intro: [
+      'Good cameras do three things. They make people think twice. They record what happened. And they let you check your property from your phone, any time.',
+      'We design and install camera systems for homes, condos, stores, warehouses, job sites and car lots. Clean wiring, the right camera for each spot, and a simple app you can actually use.',
+      'Recordings stay on your own recorder. You control who sees them.',
+    ],
+    whatYouGet: [
+      'Site walk and a simple camera plan',
+      '4K cameras with night vision',
+      'Clean, tidy wiring and mounting',
+      'Recorder with weeks of storage',
+      'App set up on your phone before we leave',
+      'Service and support after installation',
+    ],
+    goodFor: ['Homes', 'Condos and apartment buildings', 'Retail stores', 'Warehouses and truck yards', 'Construction sites', 'Car dealerships'],
+    howItWorks: [
+      { step: 'Site walk', text: 'We look at every door, driveway, dock and blind spot.' },
+      { step: 'Simple plan and price', text: 'How many cameras, where, and the total cost. No surprises.' },
+      { step: 'Installation', text: 'Most homes are done in a day. Businesses in one to three days.' },
+      { step: 'App on your phone', text: 'We set it up and show you how to use it before we leave.' },
+    ],
+    faqs: [
+      { q: 'How much does camera installation cost?', a: 'A basic home system with four cameras usually starts around $1,500 installed. Businesses vary by size. We quote after a short site walk.' },
+      { q: 'Can I see my cameras on my phone?', a: 'Yes. We set up the app on your phone before we leave.' },
+      { q: 'Do you monitor the cameras for me?', a: 'No. You view and control your own cameras. If you want a live response to break-ins, ask about our alarm monitoring and alarm response services.' },
+      { q: 'Do you install at homes or just businesses?', a: 'Both. Houses, condos, stores, warehouses, job sites and car lots.' },
+    ],
+    priceNote: 'Camera installation is quoted per job after a site walk. Home systems usually start around $1,500 installed.',
   },
   {
     slug: 'alarm-response',
+    group: 'guarding',
     name: 'Alarm Response',
     short: 'When your alarm goes off at 3 a.m., we go so you do not have to.',
     icon: 'bell',
@@ -227,6 +308,7 @@ export const services: Service[] = [
   },
   {
     slug: 'investigations',
+    group: 'guarding',
     name: 'Investigations & Executive Protection',
     short: 'Private investigators and close protection for people and companies who need discretion.',
     icon: 'eye',
@@ -262,6 +344,7 @@ export const services: Service[] = [
   },
   {
     slug: 'clean-up',
+    group: 'guarding',
     name: 'Clean-Up Services',
     short: 'After a break-in, a flood or a fire, we help you clean up and secure the site.',
     icon: 'broom',

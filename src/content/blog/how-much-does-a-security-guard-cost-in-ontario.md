@@ -68,9 +68,9 @@ A guard on site is not always the right answer. Two cheaper choices:
 
 **Mobile patrol.** A marked car visits your property a few times a night. You pay **per visit**, often $20 to $40 each. Great for plazas, parking lots and empty buildings.
 
-**Monitored cameras.** A real person watches your cameras and speaks through a loudspeaker if someone shows up. Priced **per month**. Great for large open sites like truck yards and car lots.
+**A monitored alarm.** Your burglar alarm is connected to a 24-hour station. If it trips, the station calls you and sends police or a guard. Priced **per month**, usually less than one guard shift. Great for stores, offices and warehouses after close.
 
-Many clients use a guard by day and cameras or patrol by night. That can cut the monthly bill in half.
+Many clients use a guard by day and a monitored alarm with patrol by night. That can cut the monthly bill in half.
 
 ## How to get a fair quote
 

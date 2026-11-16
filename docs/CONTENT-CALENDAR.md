@@ -11,7 +11,7 @@ Mark done with the date. First three are written.
 | 2 | 2026-11-27 | Construction site security in Vaughan: what a site super actually needs | Construction | construction-site-security | ☐ |
 | 3 | 2026-12-01 | Condo security guard vs concierge: which does your building need? | Condos | condo-security | ☐ |
 | 3 | 2026-12-04 | Mobile patrol vs on-site guard: cost and when each makes sense | Prices | mobile-patrol | ☐ |
-| 4 | 2026-12-08 | Can cameras replace a security guard? An honest answer | Cameras | video-monitoring | ☐ |
+| 4 | 2026-12-08 | Alarm monitoring explained: what happens when your alarm trips | Alarms | alarm-monitoring | ☐ |
 | 4 | 2026-12-11 | 7 questions to ask before hiring a security company in Vaughan | Hiring a company | security-guards | ☐ |
 | 5 | 2026-12-15 | Holiday season retail security in the GTA: what works | Retail | security-guards | ☐ |
 | 5 | 2026-12-18 | Warehouse and truck-yard security in Vaughan and Brampton | Warehouses | security-guards | ☐ |
@@ -20,8 +20,8 @@ Mark done with the date. First three are written.
 | 7 | 2027-01-05 | Car dealership security in the GTA: stopping lot theft | Local | mobile-patrol | ☐ |
 | 7 | 2027-01-08 | Event security for weddings and banquet halls in Vaughan | Local | security-guards | ☐ |
 | 8 | 2027-01-12 | Security for law firms and professional offices | Hiring a company | investigations | ☐ |
-| 8 | 2027-01-15 | Vacant property security: keeping an empty building safe | Cameras | video-monitoring | ☐ |
-| 9 | 2027-01-19 | Security guard vs security system: which first? | Prices | security-guards | ☐ |
+| 8 | 2027-01-15 | Does your building need fire alarm monitoring? (Ontario Fire Code, plain English) | Alarms | fire-alarm-monitoring | ☐ |
+| 9 | 2027-01-19 | Security guard vs alarm system: which should you get first? | Prices | alarm-monitoring | ☐ |
 | 9 | 2027-01-22 | Security for property managers: one partner for every building | Hiring a company | security-guards | ☐ |
 | 10 | 2027-01-26 | What a security guard shift report should include (with sample) | Hiring a company | security-guards | ☐ |
 | 10 | 2027-01-29 | Clinic and pharmacy security: calm, trained guards | Local | security-guards | ☐ |
@@ -31,7 +31,7 @@ Mark done with the date. First three are written.
 | 12 | 2027-02-12 | Can a security guard arrest someone in Ontario? | Hiring a company | security-guards | ☐ |
 | 13 | 2027-02-16 | How to stop package theft in your condo | Condos | condo-security | ☐ |
 | 13 | 2027-02-19 | Cargo theft in the GTA: how gate guards stop it | Warehouses | security-guards | ☐ |
-| 14 | 2027-02-23 | Solar camera towers for job sites: pros, cons, cost | Cameras | video-monitoring | ☐ |
+| 14 | 2027-02-23 | Home security camera installation in Vaughan: what it costs and where to put them | Cameras | camera-installation | ☐ |
 | 14 | 2027-02-26 | What to do after a break-in at your store (checklist) | Retail | clean-up | ☐ |
 | 15 | 2027-03-02 | Executive protection: who actually uses it in the GTA | Hiring a company | investigations | ☐ |
 | 15 | 2027-03-05 | Security guard company in Vaughan: how to pick the right one | Local | security-guards | ☐ |

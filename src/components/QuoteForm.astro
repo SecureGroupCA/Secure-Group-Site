@@ -1,7 +1,7 @@
 ---
 import { services } from '@/data/services';
-interface Props { compact?: boolean; subject?: string }
-const { compact = false, subject = 'Quote request' } = Astro.props;
+interface Props { compact?: boolean; subject?: string; preselect?: string }
+const { compact = false, subject = 'Quote request', preselect = '' } = Astro.props;
 ---
 <form name="quote" method="POST" data-netlify="true" netlify-honeypot="company-website" action="/thank-you" class="grid gap-4">
   <input type="hidden" name="form-name" value="quote" />
@@ -21,7 +21,7 @@ const { compact = false, subject = 'Quote request' } = Astro.props;
   <div class="grid gap-4 sm:grid-cols-2">
     <label class="grid gap-1.5 text-sm font-medium">What do you need?
       <select name="service" class="field">
-        {services.map((s) => <option value={s.name}>{s.name}</option>)}
+        {services.map((s) => <option value={s.name} selected={s.name === preselect}>{s.name}</option>)}
         <option>Not sure yet</option>
       </select>
     </label>

@@ -17,14 +17,14 @@ export const sectors: Sector[] = [
     name: 'Construction',
     short: 'High-rise and low-rise job sites across Vaughan and the GTA.',
     seoTitle: 'Construction Site Security Company in Vaughan & GTA | Secure Group',
-    description: 'Security for high-rise and low-rise construction sites in Vaughan, Toronto and the GTA. Gate control, night patrols, camera towers and fire watch since 2014.',
+    description: 'Security for high-rise and low-rise construction sites in Vaughan, Toronto and the GTA. Gate control, night patrols, camera installation and fire watch since 2014.',
     intro: [
       'A job site is full of things people want to steal: copper, tools, lumber, machines. It is also a place where a trespasser can get badly hurt.',
       'We have guarded job sites across the GTA since 2014. Our guards know how a site works, from the gate log to the hoist to the hot-work permit.',
     ],
     risks: ['Tool and copper theft on weekends', 'Trespassers and injury claims', 'Unlogged visitors at the gate', 'Fire during hot work', 'Vandalism to finished units'],
-    howWeHelp: ['Gate guard with sign-in by day', 'Patrols and camera towers by night', 'Fire watch with a proper log', 'Daily report with photos to the super', 'Fast add-on coverage for long weekends'],
-    services: ['construction-site-security', 'video-monitoring', 'mobile-patrol'],
+    howWeHelp: ['Gate guard with sign-in by day', 'Night patrols and recorded cameras', 'Fire watch with a proper log', 'Daily report with photos to the super', 'Fast add-on coverage for long weekends'],
+    services: ['construction-site-security', 'mobile-patrol', 'camera-installation'],
     faqs: [
       { q: 'Can you start before the weekend?', a: 'Yes. Most job sites get a guard within 48 hours, often sooner.' },
       { q: 'Do you know site safety rules?', a: 'Yes. Our guards wear the right gear, sign in, and follow your site orientation.' },
@@ -42,7 +42,7 @@ export const sectors: Sector[] = [
     ],
     risks: ['Tailgating into the lobby', 'Car break-ins in the garage', 'Noise and rule complaints', 'Package theft', 'Trespassers in stairwells'],
     howWeHelp: ['Front desk and concierge coverage', 'Scheduled garage and stairwell patrols', 'Visitor and contractor sign-in', 'Rule enforcement with a calm approach', 'Monthly report for the board'],
-    services: ['condo-security', 'security-guards', 'mobile-patrol'],
+    services: ['condo-security', 'security-guards', 'fire-alarm-monitoring', 'camera-installation'],
     faqs: [
       { q: 'Can one person do concierge and security?', a: 'Yes. We train guards for both and most buildings prefer one person who can do each.' },
       { q: 'Will residents see the same guards?', a: 'We keep a small team on each building so faces stay familiar.' },
@@ -59,8 +59,8 @@ export const sectors: Sector[] = [
       'We cover guards, patrols, alarm response and after-damage clean-up. One contact, one invoice, and a report you can forward to your client.',
     ],
     risks: ['Different vendors for each building', 'Slow response after alarms', 'No paper trail for incidents', 'Vacant units and break-ins', 'Tenant complaints about safety'],
-    howWeHelp: ['One contact for all your properties', 'Patrol routes that cover several sites', 'Alarm response with photo reports', 'Board-up and clean-up after damage', 'Monthly summaries per building'],
-    services: ['security-guards', 'mobile-patrol', 'alarm-response', 'clean-up'],
+    howWeHelp: ['One contact for all your properties', 'Patrol routes that cover several sites', 'Fire and burglar alarm monitoring for every building', 'Alarm response with photo reports', 'Board-up and clean-up after damage', 'Monthly summaries per building'],
+    services: ['security-guards', 'mobile-patrol', 'fire-alarm-monitoring', 'alarm-monitoring', 'alarm-response', 'clean-up'],
     faqs: [
       { q: 'Can you cover buildings in different cities?', a: 'Yes. We work across Vaughan, Toronto, Mississauga, Brampton, Markham, Richmond Hill and Bradford.' },
       { q: 'Do you offer one invoice for everything?', a: 'Yes. One monthly invoice broken down by property.' },
@@ -77,8 +77,8 @@ export const sectors: Sector[] = [
       'Our retail guards deter theft, support staff, and handle incidents calmly so your customers feel welcome.',
     ],
     risks: ['Shoplifting and organized theft', 'Staff facing aggressive customers', 'Parking lot break-ins', 'After-hours break-ins', 'Holiday season crowds'],
-    howWeHelp: ['Uniformed or plain-clothes guards', 'Door and parking lot presence', 'Alarm response after close', 'Extra coverage for holidays and sales', 'Incident reports for police and insurers'],
-    services: ['security-guards', 'alarm-response', 'mobile-patrol'],
+    howWeHelp: ['Uniformed or plain-clothes guards', 'Door and parking lot presence', 'Monitored burglar alarm and cameras', 'Alarm response after close', 'Extra coverage for holidays and sales', 'Incident reports for police and insurers'],
+    services: ['security-guards', 'alarm-monitoring', 'camera-installation', 'alarm-response'],
     faqs: [
       { q: 'Can guards detain shoplifters?', a: 'Guards can make a citizen’s arrest in limited situations under Canadian law. Our guards are trained on exactly when it is allowed and when to call police instead.' },
       { q: 'Do you do seasonal coverage?', a: 'Yes. Many stores add guards from November to January.' },
@@ -92,11 +92,11 @@ export const sectors: Sector[] = [
     description: 'Security guards, gate control and camera monitoring for warehouses, truck yards and plants in Vaughan, Brampton, Mississauga and the GTA.',
     intro: [
       'Vaughan, Brampton and Mississauga are full of warehouses and truck yards. They are also where cargo theft happens.',
-      'We put a guard at the gate, log every truck, patrol the yard and watch the cameras overnight.',
+      'We put a guard at the gate, log every truck, patrol the yard, and install cameras so you can see the yard from your phone.',
     ],
     risks: ['Cargo and trailer theft', 'Unlogged trucks at the gate', 'Employee theft from the dock', 'Fuel theft from the yard', 'Trespassers after hours'],
-    howWeHelp: ['Gate guard with truck and driver log', 'Yard patrols on foot and by vehicle', 'Live camera monitoring overnight', 'Dock and shipping area checks', 'Photo reports for every shift'],
-    services: ['security-guards', 'video-monitoring', 'mobile-patrol'],
+    howWeHelp: ['Gate guard with truck and driver log', 'Yard patrols on foot and by vehicle', 'Camera installation covering gates and docks', 'Dock and shipping area checks', 'Photo reports for every shift'],
+    services: ['security-guards', 'mobile-patrol', 'camera-installation', 'alarm-monitoring'],
     faqs: [
       { q: 'Can you log trucks in and out?', a: 'Yes. Our gate guards record plates, driver names, seal numbers and times.' },
       { q: 'Do you work 24/7 sites?', a: 'Yes. Round-the-clock posts are common in this sector.' },
@@ -131,7 +131,7 @@ export const sectors: Sector[] = [
     ],
     risks: ['Aggressive patients or visitors', 'Drug theft at pharmacies', 'Wandering residents in care homes', 'After-hours break-ins', 'Staff walking to cars at night'],
     howWeHelp: ['De-escalation trained guards', 'Entrance control and visitor logs', 'Escorts for staff after dark', 'Pharmacy and supply room patrols', 'Incident reports that respect privacy'],
-    services: ['security-guards', 'alarm-response', 'video-monitoring'],
+    services: ['security-guards', 'alarm-monitoring', 'fire-alarm-monitoring', 'camera-installation'],
     faqs: [
       { q: 'Are guards trained on patient privacy?', a: 'Yes. Our health care guards get training on confidentiality before they start.' },
     ],
@@ -141,16 +141,16 @@ export const sectors: Sector[] = [
     name: 'Automotive',
     short: 'Dealership lots and service bays, watched all night.',
     seoTitle: 'Car Dealership Security in Vaughan & the GTA | Secure Group',
-    description: 'Security for car dealerships, body shops and auto lots in Vaughan and the GTA. Stop vehicle theft and catalytic converter theft with guards, patrols and monitored cameras.',
+    description: 'Security for car dealerships, body shops and auto lots in Vaughan and the GTA. Stop vehicle theft and catalytic converter theft with guards, patrols, cameras and alarm monitoring.',
     intro: [
       'Car theft in the GTA is at record levels. Dealership lots and body shops are easy targets after dark.',
-      'We combine a night guard or patrol with monitored cameras so a thief is seen and challenged before a car leaves the lot.',
+      'We combine a night guard or patrol with cameras and a monitored alarm so a thief is seen and stopped before a car leaves the lot.',
     ],
     risks: ['Vehicle theft from the lot', 'Catalytic converter theft', 'Key box break-ins', 'Vandalism to inventory', 'Parts theft from service bays'],
-    howWeHelp: ['Overnight lot guard or patrol', 'Monitored cameras with voice warning', 'Key control checks', 'Alarm response', 'Photo reports each morning'],
-    services: ['mobile-patrol', 'video-monitoring', 'security-guards'],
+    howWeHelp: ['Overnight lot guard or patrol', 'Camera installation covering the whole lot', 'Key control checks', 'Alarm response', 'Photo reports each morning'],
+    services: ['mobile-patrol', 'security-guards', 'camera-installation', 'alarm-monitoring'],
     faqs: [
-      { q: 'Is a guard or cameras better for a car lot?', a: 'Monitored cameras with a loudspeaker work well on open lots, with a patrol as backup. For high-value inventory, an overnight guard is the safest choice.' },
+      { q: 'Is a guard or cameras better for a car lot?', a: 'Cameras record and deter, and a mobile patrol adds a real person at random times. For high-value inventory, an overnight guard is the safest choice. Many dealers use all three.' },
     ],
   },
   {
@@ -165,7 +165,7 @@ export const sectors: Sector[] = [
     ],
     risks: ['Uninvited guests at events', 'Intoxicated guests', 'Theft from rooms and halls', 'Parking lot incidents', 'Overcrowding'],
     howWeHelp: ['Door and guest list control', 'Discreet floor presence', 'Parking lot patrols', 'Crowd and capacity management', 'Fast response to incidents'],
-    services: ['security-guards', 'investigations', 'mobile-patrol'],
+    services: ['security-guards', 'fire-alarm-monitoring', 'camera-installation', 'mobile-patrol'],
     faqs: [
       { q: 'Can you staff a wedding?', a: 'Yes. One or two guards for a wedding or banquet is one of our most common bookings.' },
     ],
@@ -182,7 +182,7 @@ export const sectors: Sector[] = [
     ],
     risks: ['Hostile parties visiting the office', 'Threats against lawyers or clients', 'Document theft', 'Process serving gone wrong', 'Need for surveillance evidence'],
     howWeHelp: ['Reception and office security', 'Protection during meetings and court dates', 'Licensed investigations and surveillance', 'Background checks', 'Discreet, written reports'],
-    services: ['investigations', 'security-guards'],
+    services: ['investigations', 'security-guards', 'alarm-monitoring', 'camera-installation'],
     faqs: [
       { q: 'Do you sign confidentiality agreements?', a: 'Yes. We sign your NDA before any work begins.' },
     ],
