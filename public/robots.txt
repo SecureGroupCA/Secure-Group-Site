@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://secure-group.ca/sitemap-index.xml

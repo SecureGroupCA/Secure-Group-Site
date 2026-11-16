@@ -1,0 +1,23 @@
+---
+import Base from '@/layouts/Base.astro';
+import PageHero from '@/components/PageHero.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import Icon from '@/components/Icon.astro';
+import { sectors } from '@/data/sectors';
+import { breadcrumbs } from '@/lib/schema';
+---
+<Base title="Who We Protect | Security for Every Sector in the GTA | Secure Group" description="Security for construction sites, condos, property managers, retail, warehouses, government, health care, car dealerships, hotels and law firms across Vaughan and the GTA." schemas={[breadcrumbs([{ name: 'Who we protect', path: '/sectors' }])]}>
+  <PageHero eyebrow="Who we protect" title="Every kind of property has its own risks. We know them." lead="Pick your kind of business. Each page shows what usually goes wrong and exactly how we stop it." crumbs={[{ name: 'Who we protect', path: '/sectors' }]} />
+  <section class="wrap pb-20">
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {sectors.map((s) => (
+        <a href={`/sectors/${s.slug}`} class="card group reveal">
+          <h3>{s.name}</h3>
+          <p class="mt-2 text-ink-soft">{s.short}</p>
+          <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold">See how we help <Icon name="arrow" class="h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
+        </a>
+      ))}
+    </div>
+  </section>
+  <CtaBand />
+</Base>

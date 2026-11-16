@@ -1,0 +1,43 @@
+---
+import { services } from '@/data/services';
+interface Props { compact?: boolean; subject?: string }
+const { compact = false, subject = 'Quote request' } = Astro.props;
+---
+<form name="quote" method="POST" data-netlify="true" netlify-honeypot="company-website" action="/thank-you" class="grid gap-4">
+  <input type="hidden" name="form-name" value="quote" />
+  <input type="hidden" name="subject" value={subject} />
+  <p class="hidden"><label>Leave this empty <input name="company-website" /></label></p>
+  <div class="grid gap-4 sm:grid-cols-2">
+    <label class="grid gap-1.5 text-sm font-medium">Your name
+      <input name="name" required autocomplete="name" class="field" />
+    </label>
+    <label class="grid gap-1.5 text-sm font-medium">Phone
+      <input name="phone" type="tel" required autocomplete="tel" class="field" />
+    </label>
+  </div>
+  <label class="grid gap-1.5 text-sm font-medium">Email
+    <input name="email" type="email" required autocomplete="email" class="field" />
+  </label>
+  <div class="grid gap-4 sm:grid-cols-2">
+    <label class="grid gap-1.5 text-sm font-medium">What do you need?
+      <select name="service" class="field">
+        {services.map((s) => <option value={s.name}>{s.name}</option>)}
+        <option>Not sure yet</option>
+      </select>
+    </label>
+    <label class="grid gap-1.5 text-sm font-medium">Where is the site?
+      <input name="location" placeholder="City or address" class="field" />
+    </label>
+  </div>
+  {!compact && (
+    <label class="grid gap-1.5 text-sm font-medium">Tell us a little more
+      <textarea name="details" rows="4" placeholder="Hours, start date, what worries you" class="field"></textarea>
+    </label>
+  )}
+  <button type="submit" class="btn btn-ink mt-2 w-full sm:w-auto">Send my quote request</button>
+  <p class="text-xs text-ink-soft">We reply within one business hour, usually faster. Nothing is shared with anyone else.</p>
+</form>
+<style>
+  .field { width: 100%; border: 1px solid var(--color-line); background: #fff; border-radius: .75rem; padding: .8rem 1rem; font: inherit; font-weight: 400; }
+  .field:focus { outline: 2px solid var(--color-gold); outline-offset: 1px; border-color: var(--color-gold); }
+</style>

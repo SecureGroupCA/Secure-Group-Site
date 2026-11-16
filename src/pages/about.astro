@@ -1,0 +1,58 @@
+---
+import Base from '@/layouts/Base.astro';
+import PageHero from '@/components/PageHero.astro';
+import Icon from '@/components/Icon.astro';
+import TrustStrip from '@/components/TrustStrip.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import { site } from '@/data/site';
+import { breadcrumbs } from '@/lib/schema';
+const values = [
+  { t: 'We show up', d: 'A guard who is late or missing is worse than no guard. Every shift is checked by a supervisor.' },
+  { t: 'We tell the truth', d: 'If cameras will do the job for less, we say so. If you need a guard, we say that too.' },
+  { t: 'We write it down', d: 'Every shift, visit and incident gets a report you can forward to your boss, your board or your insurer.' },
+  { t: 'We stay calm', d: 'Our guards are trained to talk first. Police are called when needed, not as a reflex.' },
+];
+---
+<Base title="About Secure Group Protection Services | Vaughan Security Company Since 2014" description="Secure Group Protection Services is a licensed Ontario security company based at 90 Winges Rd, Vaughan. Guards, patrols and monitoring across the GTA since 2014." schemas={[breadcrumbs([{ name: 'About', path: '/about' }])]}>
+  <PageHero eyebrow="About us" title="A Vaughan security company that answers the phone." lead="We started in 2014 with a simple idea: show up, do the job right, and write it down. Twelve years later that is still the whole plan." crumbs={[{ name: 'About', path: '/about' }]} />
+  <section class="wrap pb-16"><TrustStrip /></section>
+
+  <section class="section pt-0">
+    <div class="wrap grid gap-14 lg:grid-cols-[1.2fr_1fr]">
+      <div class="prose-plain text-lg">
+        <p>Secure Group Protection Services Inc. is a licensed security agency under Ontario’s Private Security and Investigative Services Act. Our office is at {site.address.street} in Woodbridge, Vaughan.</p>
+        <p>We protect job sites, condo towers, warehouses, plazas, car lots, clinics, hotels and law offices across Vaughan, Toronto, Mississauga, Brampton, Markham, Richmond Hill and Bradford.</p>
+        <p>Every guard we send is licensed, trained and in uniform. Every shift is checked. Every client gets a report. That is what “risk mitigation” means to us: fewer problems, and proof that the work was done.</p>
+        <h2>How we are different</h2>
+        <p>Big national firms rotate strangers through your site. One-person outfits disappear when they get busy. We sit in the middle: big enough to cover a 24-hour post, small enough that you can call the owner.</p>
+      </div>
+      <div class="space-y-5">
+        <div class="card">
+          <p class="eyebrow">Licence and insurance</p>
+          <ul class="mt-4 space-y-3 text-[0.97rem]">
+            <li class="flex items-start gap-3"><Icon name="check" class="mt-1 h-5 w-5 shrink-0 text-gold" /><span>Licensed security guard and private investigator agency (Ontario PSISA)</span></li>
+            <li class="flex items-start gap-3"><Icon name="check" class="mt-1 h-5 w-5 shrink-0 text-gold" /><span>{site.insurance}</span></li>
+            <li class="flex items-start gap-3"><Icon name="check" class="mt-1 h-5 w-5 shrink-0 text-gold" /><span>Every guard holds a valid Ontario licence. <a href="https://www.ontario.ca/page/private-security-and-investigative-services" rel="noopener" target="_blank" class="underline decoration-gold underline-offset-4">Check any licence here</a>.</span></li>
+          </ul>
+          {!site.licence.verified && <p class="mt-4 text-xs text-ink-soft">Agency licence number to be added before launch.</p>}
+        </div>
+        <div class="card">
+          <p class="eyebrow">Visit or call</p>
+          <p class="mt-3 font-serif text-xl">{site.address.street}<br />{site.address.city}, {site.address.province} {site.address.postal}</p>
+          <p class="mt-3"><a href={site.phoneHref} class="font-semibold">{site.phone}</a> · {site.hours}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-mist">
+    <div class="wrap">
+      <p class="eyebrow">What we believe</p>
+      <h2 class="mt-3">Four simple rules.</h2>
+      <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {values.map((v, i) => <div class="card reveal"><span class="font-serif text-3xl text-gold">{i + 1}</span><h3 class="mt-3">{v.t}</h3><p class="mt-2 text-ink-soft">{v.d}</p></div>)}
+      </div>
+    </div>
+  </section>
+  <CtaBand title="Want to meet us first? Come by the office." text="Or call. We will walk your property, listen, and send a plan the same day." />
+</Base>

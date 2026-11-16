@@ -1,0 +1,12 @@
+---
+import Base from '@/layouts/Base.astro';
+import { site } from '@/data/site';
+---
+<Base title="Thank you | Secure Group" description="We got your message and will reply within one business hour." noindex>
+  <section class="section"><div class="wrap max-w-2xl text-center">
+    <p class="eyebrow">Got it</p>
+    <h1 class="mt-4">Thank you. We will reply within one business hour.</h1>
+    <p class="mt-6 text-lg text-ink-soft">Need someone sooner? Call <a href={site.phoneHref} class="font-semibold text-ink">{site.phone}</a>. We answer 24 hours a day.</p>
+    <a href="/" class="btn btn-outline mt-8">Back to home</a>
+  </div></section>
+</Base>

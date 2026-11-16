@@ -1,0 +1,21 @@
+---
+interface Props { name: string; class?: string }
+const { name, class: cls = 'h-6 w-6' } = Astro.props;
+const paths: Record<string, string> = {
+  shield: 'M12 3l7 3v5c0 5-3.2 8.6-7 10-3.8-1.4-7-5-7-10V6l7-3z',
+  check: 'M9 12.5l2 2 4.5-5',
+  car: 'M5 13l1.5-4.5h11L19 13M5 13h14v4H5v-4zM7 17v2M17 17v2',
+  crane: 'M4 20h16M8 20V6l8-2v16M8 10h8',
+  building: 'M5 20V5l7-2v17M12 20h7V9h-7M8 8h1M8 11h1M8 14h1M15 12h1M15 15h1',
+  camera: 'M4 8h4l2-2h4l2 2h4v10H4V8zM12 16a3 3 0 100-6 3 3 0 000 6z',
+  bell: 'M6 16V11a6 6 0 1112 0v5l1.5 2h-15L6 16zM10 20a2 2 0 004 0',
+  eye: 'M2 12s4-6 10-6 10 6 10 6-4 6-10 6S2 12 2 12zM12 15a3 3 0 100-6 3 3 0 000 6z',
+  broom: 'M14 4l6 6M4 20l6-6M10 14l4-4 6 6-2 2M4 20c2 0 5-1 6-3',
+  phone: 'M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z',
+  clock: 'M12 21a9 9 0 100-18 9 9 0 000 18zM12 8v4l3 2',
+  pin: 'M12 21s-6-5.5-6-10a6 6 0 1112 0c0 4.5-6 10-6 10zM12 13a2 2 0 100-4 2 2 0 000 4z',
+  arrow: 'M5 12h14M13 6l6 6-6 6',
+  star: 'M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7L12 3z',
+};
+---
+<svg class={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={paths[name] ?? paths.shield} /></svg>

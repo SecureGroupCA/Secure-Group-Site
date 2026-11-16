@@ -1,0 +1,161 @@
+---
+import Base from '@/layouts/Base.astro';
+import Icon from '@/components/Icon.astro';
+import ServiceCard from '@/components/ServiceCard.astro';
+import TrustStrip from '@/components/TrustStrip.astro';
+import Faq from '@/components/Faq.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import QuoteForm from '@/components/QuoteForm.astro';
+import { site } from '@/data/site';
+import { services } from '@/data/services';
+import { sectors } from '@/data/sectors';
+import { areas } from '@/data/areas';
+import { faq } from '@/lib/schema';
+
+const faqs = [
+  { q: 'How fast can you send a guard?', a: 'In Vaughan and nearby cities, often within 2 hours. For planned work, we usually start the same day.' },
+  { q: 'Are your guards licensed?', a: 'Yes. Every guard holds a valid Ontario security guard licence. You can check any licence on the ServiceOntario website.' },
+  { q: 'How much does a security guard cost?', a: 'Most guard work in the GTA is $25 to $45 per hour. The price depends on the site, the hours and the training needed. We give one clear hourly rate with no hidden fees.' },
+  { q: 'Do I have to sign a long contract?', a: 'No. You can book one shift, one weekend or a long-term post. Many clients start small and grow.' },
+  { q: 'Which cities do you cover?', a: `${site.serviceArea}. Our office is in Vaughan.` },
+];
+const steps = [
+  { n: '1', t: 'Call or send a quote request', d: 'Tell us the address, the hours, and what worries you.' },
+  { n: '2', t: 'Get a clear plan and price', d: 'Same day. One hourly rate. No surprises.' },
+  { n: '3', t: 'Your guard arrives', d: 'In uniform, licensed, often within 2 hours.' },
+];
+const reviews = [
+  { text: 'They sent a guard the same night we called. Professional, on time, and the daily report was exactly what our board wanted.', who: 'Property manager, Vaughan' },
+  { text: 'We had tools going missing every weekend. Since Secure Group took over the site, nothing. The super loves the gate log.', who: 'Site superintendent, Toronto' },
+  { text: 'Last-minute event, 200 guests. Two guards, polite and sharp. Nobody even noticed them until we needed them.', who: 'Banquet hall owner, Woodbridge' },
+];
+---
+<Base title="Security Guard Company in Vaughan & the GTA | Secure Group Protection Services" description="Licensed security guards, mobile patrol, construction site security, condo security and live video monitoring in Vaughan and across the GTA. On site in as little as 2 hours. Call 416-751-1894." schemas={[faq(faqs)]}>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-ink text-paper">
+    <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+      <div class="absolute -right-40 -top-40 h-[34rem] w-[34rem] rounded-full bg-gold/10 blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
+    </div>
+    <div class="wrap relative grid gap-12 py-20 lg:grid-cols-[1.25fr_1fr] lg:items-center lg:py-28">
+      <div>
+        <p class="eyebrow !text-gold">Vaughan · Toronto · The GTA · Since {site.founded}</p>
+        <h1 class="mt-5 text-display">Security guards you can call <em class="not-italic text-gold">right now.</em></h1>
+        <p class="mt-7 max-w-xl text-xl text-paper/75">Licensed, uniformed guards for your building, job site, store or event. On site in as little as 2 hours. One clear price.</p>
+        <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+          <a href={site.phoneHref} class="btn btn-gold text-lg">Call {site.phone}</a>
+          <a href="/contact" class="btn btn-ghost-light">Get a written quote</a>
+        </div>
+        <ul class="mt-10 grid max-w-xl grid-cols-1 gap-3 text-sm text-paper/80 sm:grid-cols-3">
+          <li class="flex items-center gap-2"><Icon name="check" class="h-5 w-5 text-gold" /> Licensed in Ontario</li>
+          <li class="flex items-center gap-2"><Icon name="check" class="h-5 w-5 text-gold" /> Open 24 hours, 7 days</li>
+          <li class="flex items-center gap-2"><Icon name="check" class="h-5 w-5 text-gold" /> No long contracts</li>
+        </ul>
+      </div>
+      <div class="rounded-3xl border border-paper/10 bg-paper/[0.04] p-6 backdrop-blur-sm lg:p-8">
+        <p class="font-serif text-2xl">Get a quote in one business hour</p>
+        <p class="mt-2 text-sm text-paper/60">Fill this in or just call. Either works.</p>
+        <div class="mt-6 rounded-2xl bg-paper p-5 text-ink">
+          <QuoteForm compact subject="Home page quote" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust -->
+  <section class="wrap -mt-8 relative z-10 lg:-mt-10"><TrustStrip /></section>
+
+  <!-- Services -->
+  <section class="section">
+    <div class="wrap">
+      <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <p class="eyebrow">What we do</p>
+          <h2 class="mt-3">Pick the help you need.</h2>
+        </div>
+        <p class="max-w-md text-ink-soft">Not sure which one? Call us. We will tell you honestly what fits, even if it is the cheaper option.</p>
+      </div>
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {services.map((s) => <ServiceCard href={`/services/${s.slug}`} name={s.name} short={s.short} icon={s.icon} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section bg-mist">
+    <div class="wrap grid gap-12 lg:grid-cols-[1fr_1.4fr]">
+      <div>
+        <p class="eyebrow">How it works</p>
+        <h2 class="mt-3">Three steps. Usually done in a day.</h2>
+        <p class="mt-5 text-ink-soft">No long forms, no sales visits. Just a phone call and a plan.</p>
+        <a href="/contact" class="btn btn-ink mt-8">Start with a quote</a>
+      </div>
+      <ol class="grid gap-4">
+        {steps.map((s) => (
+          <li class="card flex gap-6 reveal">
+            <span class="font-serif text-4xl text-gold">{s.n}</span>
+            <div><h3>{s.t}</h3><p class="mt-1 text-ink-soft">{s.d}</p></div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- Sectors -->
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Who we protect</p>
+      <h2 class="mt-3 max-w-2xl">Every kind of property, from a job site to a law office.</h2>
+      <div class="mt-10 grid grid-cols-2 gap-3 md:grid-cols-5">
+        {sectors.map((s) => (
+          <a href={`/sectors/${s.slug}`} class="group rounded-2xl border border-line bg-white px-5 py-6 transition-colors hover:border-ink reveal">
+            <span class="block font-serif text-lg leading-tight">{s.name}</span>
+            <span class="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-ink-soft group-hover:text-ink">See how <Icon name="arrow" class="h-3.5 w-3.5" /></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Vaughan focus -->
+  <section class="section bg-ink text-paper">
+    <div class="wrap grid gap-12 lg:grid-cols-2 lg:items-center">
+      <div>
+        <p class="eyebrow !text-gold">Local to Vaughan</p>
+        <h2 class="mt-3">Our office is at 90 Winges Rd. We are already here.</h2>
+        <p class="mt-5 text-paper/75">When a Vaughan client calls, our guards are not driving in from across the city. We know Woodbridge, Maple, Concord, Thornhill and Kleinburg street by street.</p>
+        <a href="/areas/vaughan" class="btn btn-gold mt-8">Security guards in Vaughan</a>
+      </div>
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-paper/50">We also serve</p>
+        <ul class="mt-4 grid grid-cols-2 gap-x-6 gap-y-3">
+          {areas.filter((a) => !a.primary).map((a) => (
+            <li><a href={`/areas/${a.slug}`} class="inline-flex items-center gap-2 font-serif text-2xl hover:text-gold"><Icon name="pin" class="h-5 w-5 text-gold" /> {a.name}</a></li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">What clients say</p>
+      <h2 class="mt-3">Simple words from people we protect.</h2>
+      <div class="mt-10 grid gap-5 md:grid-cols-3">
+        {reviews.map((r) => (
+          <figure class="card reveal">
+            <div class="flex gap-0.5 text-gold">{[1,2,3,4,5].map(() => <Icon name="star" class="h-4 w-4 fill-current" />)}</div>
+            <blockquote class="mt-4 font-serif text-xl leading-snug">“{r.text}”</blockquote>
+            <figcaption class="mt-4 text-sm text-ink-soft">{r.who}</figcaption>
+          </figure>
+        ))}
+      </div>
+      <p class="mt-4 text-xs text-ink-soft">Sample reviews shown for layout. Replace with verified Google reviews before launch.</p>
+    </div>
+  </section>
+
+  <Faq items={faqs} title="Questions people ask us" />
+  <CtaBand />
+</Base>

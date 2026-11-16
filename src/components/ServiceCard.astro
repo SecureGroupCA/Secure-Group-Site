@@ -1,0 +1,11 @@
+---
+import Icon from './Icon.astro';
+interface Props { href: string; name: string; short: string; icon?: string }
+const { href, name, short, icon = 'shield' } = Astro.props;
+---
+<a href={href} class="card group flex flex-col gap-4 reveal">
+  <span class="grid h-11 w-11 place-items-center rounded-full bg-mist text-ink"><Icon name={icon} class="h-5 w-5" /></span>
+  <h3 class="text-[1.3rem]">{name}</h3>
+  <p class="text-[0.97rem] text-ink-soft">{short}</p>
+  <span class="mt-auto inline-flex items-center gap-2 text-sm font-semibold">Learn more <Icon name="arrow" class="h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
+</a>

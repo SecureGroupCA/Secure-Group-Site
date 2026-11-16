@@ -1,0 +1,56 @@
+---
+import Base from '@/layouts/Base.astro';
+import PageHero from '@/components/PageHero.astro';
+import Icon from '@/components/Icon.astro';
+import Faq from '@/components/Faq.astro';
+import { site } from '@/data/site';
+import { breadcrumbs, jobPosting } from '@/lib/schema';
+const faqs = [
+  { q: 'Do I need a licence before I apply?', a: 'Yes. You need a valid Ontario security guard licence. If you do not have one yet, you must take the 40-hour approved course and pass the provincial test first.' },
+  { q: 'What shifts do you have?', a: 'Days, nights and weekends across Vaughan, Toronto and the GTA. Full-time and part-time.' },
+  { q: 'Do you provide the uniform?', a: 'Yes. Uniforms are supplied.' },
+  { q: 'How fast will I hear back?', a: 'We reply to every application within two business days.' },
+];
+---
+<Base title="Security Guard Jobs in Vaughan & the GTA | Careers at Secure Group" description="Hiring licensed Ontario security guards for full-time and part-time shifts in Vaughan, Toronto and the GTA. Steady hours, supplied uniform, supervisors who back you up. Apply online." schemas={[breadcrumbs([{ name: 'Careers', path: '/careers' }]), jobPosting()]}>
+  <PageHero eyebrow="Careers" title="Licensed guards: we are hiring." lead="Steady shifts, a uniform that fits, and a supervisor who picks up the phone. If you are licensed in Ontario and reliable, we want to talk." crumbs={[{ name: 'Careers', path: '/careers' }]} dark />
+  <section class="section">
+    <div class="wrap grid gap-14 lg:grid-cols-[1fr_1fr]">
+      <div>
+        <h2>What you need</h2>
+        <ul class="mt-6 space-y-3">
+          {['A valid Ontario security guard licence', 'Legally allowed to work in Canada', 'Clean background check', 'Reliable transport to sites in the GTA', 'Good English and a calm manner', 'First aid / CPR is a plus'].map((i) => <li class="flex items-start gap-3"><Icon name="check" class="mt-1 h-5 w-5 shrink-0 text-gold" />{i}</li>)}
+        </ul>
+        <h2 class="mt-12">What you get</h2>
+        <ul class="mt-6 space-y-3">
+          {['Full-time and part-time shifts', 'Uniform supplied', 'Supervisors on every shift', 'Sites in Vaughan, Toronto and across the GTA', 'Training for condo, construction and gate posts', 'Room to move up to supervisor'].map((i) => <li class="flex items-start gap-3"><Icon name="check" class="mt-1 h-5 w-5 shrink-0 text-gold" />{i}</li>)}
+        </ul>
+        <p class="mt-10 text-ink-soft">Not licensed yet? Read <a href="/blog/how-to-become-a-security-guard-in-ontario" class="underline decoration-gold underline-offset-4">how to become a security guard in Ontario</a>.</p>
+      </div>
+      <div class="card">
+        <p class="font-serif text-2xl">Apply now</p>
+        <p class="mt-1 text-sm text-ink-soft">Takes two minutes. We reply within two business days.</p>
+        <form name="apply" method="POST" data-netlify="true" netlify-honeypot="company-website" action="/thank-you" enctype="multipart/form-data" class="mt-6 grid gap-4">
+          <input type="hidden" name="form-name" value="apply" />
+          <p class="hidden"><label>Leave this empty <input name="company-website" /></label></p>
+          <label class="grid gap-1.5 text-sm font-medium">Full name <input name="name" required class="field" /></label>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="grid gap-1.5 text-sm font-medium">Phone <input name="phone" type="tel" required class="field" /></label>
+            <label class="grid gap-1.5 text-sm font-medium">Email <input name="email" type="email" required class="field" /></label>
+          </div>
+          <label class="grid gap-1.5 text-sm font-medium">Ontario licence number <input name="licence" required class="field" /></label>
+          <label class="grid gap-1.5 text-sm font-medium">City you live in <input name="city" class="field" /></label>
+          <label class="grid gap-1.5 text-sm font-medium">Resume (PDF) <input name="resume" type="file" accept=".pdf,.doc,.docx" class="field !py-2" /></label>
+          <label class="grid gap-1.5 text-sm font-medium">Anything else <textarea name="notes" rows="3" class="field"></textarea></label>
+          <button class="btn btn-ink">Send application</button>
+        </form>
+        <p class="mt-4 text-xs text-ink-soft">Or email <a href={`mailto:${site.email}`} class="underline">{site.email}</a> with your resume and licence number.</p>
+      </div>
+    </div>
+  </section>
+  <Faq items={faqs} title="Questions from applicants" />
+  <style>
+    .field { width: 100%; border: 1px solid var(--color-line); background: #fff; border-radius: .75rem; padding: .8rem 1rem; font: inherit; font-weight: 400; }
+    .field:focus { outline: 2px solid var(--color-gold); outline-offset: 1px; border-color: var(--color-gold); }
+  </style>
+</Base>

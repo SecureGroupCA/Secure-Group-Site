@@ -1,0 +1,12 @@
+---
+import Base from '@/layouts/Base.astro';
+import { site } from '@/data/site';
+---
+<Base title="Page not found | Secure Group" description="That page does not exist." noindex>
+  <section class="section"><div class="wrap max-w-2xl text-center">
+    <p class="eyebrow">404</p>
+    <h1 class="mt-4">That page is not here.</h1>
+    <p class="mt-6 text-lg text-ink-soft">Try the links below, or call <a href={site.phoneHref} class="font-semibold text-ink">{site.phone}</a>.</p>
+    <div class="mt-8 flex flex-wrap justify-center gap-3"><a href="/" class="btn btn-ink">Home</a><a href="/services" class="btn btn-outline">Services</a><a href="/contact" class="btn btn-outline">Contact</a></div>
+  </div></section>
+</Base>

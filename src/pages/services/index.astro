@@ -1,0 +1,17 @@
+---
+import Base from '@/layouts/Base.astro';
+import PageHero from '@/components/PageHero.astro';
+import ServiceCard from '@/components/ServiceCard.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import { services } from '@/data/services';
+import { breadcrumbs } from '@/lib/schema';
+---
+<Base title="Security Services in Vaughan & the GTA | Secure Group" description="Security guards, mobile patrol, construction site security, condo security, live video monitoring, alarm response, investigations and clean-up. Licensed in Ontario. Call 416-751-1894." schemas={[breadcrumbs([{ name: 'Services', path: '/services' }])]}>
+  <PageHero eyebrow="Services" title="Pick the help you need." lead="Eight simple services. Every one is done by licensed people and backed by a 24-hour dispatch desk." crumbs={[{ name: 'Services', path: '/services' }]} />
+  <section class="wrap pb-20">
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {services.map((s) => <ServiceCard href={`/services/${s.slug}`} name={s.name} short={s.short} icon={s.icon} />)}
+    </div>
+  </section>
+  <CtaBand title="Not sure which service fits?" text="Call us. We will ask a few questions and tell you the simplest option, even if it is the cheaper one." />
+</Base>

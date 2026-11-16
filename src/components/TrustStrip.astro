@@ -1,0 +1,17 @@
+---
+import { site } from '@/data/site';
+const items = [
+  { big: `Since ${site.founded}`, small: 'Protecting the GTA' },
+  { big: '24 / 7', small: 'Live dispatch, every day' },
+  { big: '2 hrs', small: 'Guard on site, often faster' },
+  { big: 'Licensed', small: 'Every guard, every shift' },
+];
+---
+<div class="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line lg:grid-cols-4">
+  {items.map((i) => (
+    <div class="bg-white px-6 py-6">
+      <p class="font-serif text-3xl">{i.big}</p>
+      <p class="mt-1 text-sm text-ink-soft">{i.small}</p>
+    </div>
+  ))}
+</div>

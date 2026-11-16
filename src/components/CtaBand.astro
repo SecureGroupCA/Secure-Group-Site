@@ -1,0 +1,19 @@
+---
+import { site } from '@/data/site';
+interface Props { title?: string; text?: string }
+const { title = 'Need a guard tonight? Call us.', text = 'We answer 24 hours a day. Tell us the address and the hours. We will give you a clear price and a start time.' } = Astro.props;
+---
+<section class="section bg-ink text-paper">
+  <div class="wrap grid items-center gap-10 lg:grid-cols-[1.4fr_1fr]">
+    <div>
+      <div class="gold-rule"></div>
+      <h2 class="mt-6 text-[clamp(2rem,4vw,3.2rem)]">{title}</h2>
+      <p class="mt-5 text-lg text-paper/75">{text}</p>
+    </div>
+    <div class="flex flex-col gap-3 lg:items-end">
+      <a href={site.phoneHref} class="btn btn-gold w-full text-lg lg:w-auto">Call {site.phone}</a>
+      <a href="/contact" class="btn btn-ghost-light w-full lg:w-auto">Get a written quote</a>
+      <p class="text-sm text-paper/55">{site.hours}</p>
+    </div>
+  </div>
+</section>

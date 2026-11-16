@@ -1,0 +1,91 @@
+---
+import Base from '@/layouts/Base.astro';
+import PageHero from '@/components/PageHero.astro';
+import Icon from '@/components/Icon.astro';
+import Faq from '@/components/Faq.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import QuoteForm from '@/components/QuoteForm.astro';
+import ServiceCard from '@/components/ServiceCard.astro';
+import TrustStrip from '@/components/TrustStrip.astro';
+import { areas } from '@/data/areas';
+import { services } from '@/data/services';
+import { sectors } from '@/data/sectors';
+import { site } from '@/data/site';
+import { faq, breadcrumbs, service as serviceSchema } from '@/lib/schema';
+
+export const getStaticPaths = () => areas.map((a) => ({ params: { slug: a.slug }, props: { a } }));
+const { a } = Astro.props;
+const path = `/areas/${a.slug}`;
+const svc = a.topServices.map((slug) => services.find((x) => x.slug === slug)!).filter(Boolean);
+const sec = a.topSectors.map((slug) => sectors.find((x) => x.slug === slug)!).filter(Boolean);
+const otherAreas = areas.filter((x) => x.slug !== a.slug);
+---
+<Base title={a.seoTitle} description={a.description} path={path} schemas={[serviceSchema(`Security guard services in ${a.name}`, a.description, path, a.name), faq(a.faqs), breadcrumbs([{ name: 'Areas', path: '/areas/vaughan' }, { name: a.name, path }])]}>
+  <PageHero eyebrow={`${a.name} · ${a.region}`} title={a.h1} lead={a.intro[0]} crumbs={[{ name: 'Areas', path: '/areas/vaughan' }, { name: a.name, path }]} dark>
+    <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+      <a href={site.phoneHref} class="btn btn-gold">Call {site.phone}</a>
+      <a href="#quote" class="btn btn-ghost-light">Get a {a.name} quote</a>
+    </div>
+    <p class="mt-6 inline-flex items-center gap-2 text-sm text-paper/70"><Icon name="clock" class="h-4 w-4 text-gold" /> Response in {a.name}: {a.responseTime.toLowerCase()}</p>
+  </PageHero>
+
+  <section class="wrap -mt-8 relative z-10 lg:-mt-10"><TrustStrip /></section>
+
+  <section class="section">
+    <div class="wrap grid gap-14 lg:grid-cols-[1.3fr_1fr]">
+      <div>
+        <div class="prose-plain text-lg">{a.intro.slice(1).map((p) => <p>{p}</p>)}</div>
+        <h2 class="mt-12">What we see in {a.name}</h2>
+        <ul class="mt-6 space-y-4">
+          {a.localNotes.map((n) => <li class="flex items-start gap-3"><Icon name="pin" class="mt-1 h-5 w-5 shrink-0 text-gold" /><span class="text-ink-700">{n}</span></li>)}
+        </ul>
+        <h2 class="mt-12">Neighbourhoods we cover</h2>
+        <ul class="mt-5 flex flex-wrap gap-2">
+          {a.neighbourhoods.map((n) => <li class="rounded-full border border-line bg-white px-3.5 py-1.5 text-sm">{n}</li>)}
+        </ul>
+        {a.primary && (
+          <div class="mt-12 rounded-2xl bg-mist p-7">
+            <p class="eyebrow">Our office</p>
+            <p class="mt-2 font-serif text-2xl">{site.address.street}, {site.address.city}, {site.address.province} {site.address.postal}</p>
+            <p class="mt-2 text-ink-soft">Off Highway 7 and Weston Rd in Woodbridge. {site.hours}.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=90+Winges+Rd+Suite+206+Vaughan+ON+L4L+6A9" rel="noopener" target="_blank" class="mt-4 inline-flex items-center gap-2 text-sm font-semibold">Open in Google Maps <Icon name="arrow" class="h-4 w-4" /></a>
+          </div>
+        )}
+      </div>
+      <aside class="lg:sticky lg:top-24 lg:self-start">
+        <div id="quote" class="card">
+          <p class="font-serif text-2xl">Get a quote in {a.name}</p>
+          <p class="mt-1 text-sm text-ink-soft">Reply within one business hour.</p>
+          <div class="mt-5"><QuoteForm compact subject={`Quote: ${a.name}`} /></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section bg-mist">
+    <div class="wrap">
+      <p class="eyebrow">Services</p>
+      <h2 class="mt-3">Security services in {a.name}</h2>
+      <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {svc.map((x) => <ServiceCard href={`/services/${x.slug}`} name={`${x.name} in ${a.name}`} short={x.short} icon={x.icon} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Who we protect in {a.name}</p>
+      <h2 class="mt-3">Common clients here</h2>
+      <div class="mt-8 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
+        {sec.map((x) => <a href={`/sectors/${x.slug}`} class="rounded-2xl border border-line bg-white px-5 py-5 font-serif text-lg leading-tight hover:border-ink reveal">{x.name}</a>)}
+      </div>
+      <h2 class="mt-14">Other areas we serve</h2>
+      <ul class="mt-6 flex flex-wrap gap-3">
+        {otherAreas.map((x) => <li><a href={`/areas/${x.slug}`} class="rounded-full border border-line bg-white px-4 py-2 text-sm font-medium hover:border-ink">Security guards in {x.name}</a></li>)}
+      </ul>
+    </div>
+  </section>
+
+  <Faq items={a.faqs} title={`Questions from ${a.name} clients`} />
+  <CtaBand title={`Need a guard in ${a.name}? Call us.`} />
+</Base>
