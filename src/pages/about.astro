@@ -6,6 +6,7 @@ import TrustStrip from '@/components/TrustStrip.astro';
 import CtaBand from '@/components/CtaBand.astro';
 import { site } from '@/data/site';
 import { breadcrumbs } from '@/lib/schema';
+import { photos, onTheJob } from '@/data/photos';
 const values = [
   { t: 'We show up', d: 'A guard who is late or missing is worse than no guard. Every shift is checked by a supervisor.' },
   { t: 'We tell the truth', d: 'If cameras will do the job for less, we say so. If you need a guard, we say that too.' },
@@ -27,6 +28,7 @@ const values = [
         <p>Big national firms rotate strangers through your site. One-person outfits disappear when they get busy. We sit in the middle: big enough to cover a 24-hour post, small enough that you can call the owner.</p>
       </div>
       <div class="space-y-5">
+        <img src={photos.teamUniform.src} alt={photos.teamUniform.alt} width="640" height="640" loading="eager" class="aspect-[4/3] w-full rounded-2xl object-cover" />
         <div class="card">
           <p class="eyebrow">Licence and insurance</p>
           <ul class="mt-4 space-y-3 text-[0.97rem]">
@@ -41,6 +43,16 @@ const values = [
           <p class="mt-3 font-serif text-xl">{site.address.street}<br />{site.address.city}, {site.address.province} {site.address.postal}</p>
           <p class="mt-3"><a href={site.phoneHref} class="font-semibold">{site.phone}</a> · {site.hours}</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pt-0">
+    <div class="wrap">
+      <p class="eyebrow">On the job</p>
+      <h2 class="mt-3">Our guards at work.</h2>
+      <div class="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
+        {onTheJob.map((p) => <img src={p.src} alt={p.alt} width="640" height="640" loading="lazy" class="aspect-square w-full rounded-2xl object-cover" />)}
       </div>
     </div>
   </section>

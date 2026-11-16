@@ -28,6 +28,7 @@ const others = services.filter((x) => x.slug !== s.slug).slice(0, 3);
   <section class="section">
     <div class="wrap grid gap-14 lg:grid-cols-[1.3fr_1fr]">
       <div>
+        {s.photo && <img src={s.photo.src} alt={s.photo.alt} width="640" height="640" loading="eager" class="mb-10 aspect-[4/3] w-full rounded-2xl object-cover" />}
         <div class="prose-plain text-lg">
           {s.intro.map((p) => <p>{p}</p>)}
         </div>

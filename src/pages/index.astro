@@ -13,6 +13,7 @@ const systems = services.filter((s) => s.group === 'systems');
 import { sectors } from '@/data/sectors';
 import { areas } from '@/data/areas';
 import { faq } from '@/lib/schema';
+import { onTheJob } from '@/data/photos';
 
 const faqs = [
   { q: 'How fast can you send a guard?', a: 'In Vaughan and nearby cities, often within 2 hours. For planned work, we usually start the same day.' },
@@ -92,6 +93,18 @@ const reviews = [
 
   <!-- Trust -->
   <section class="wrap -mt-8 relative z-10 lg:-mt-10"><TrustStrip /></section>
+
+  <!-- Real photos -->
+  <section class="section pb-0">
+    <div class="wrap">
+      <p class="eyebrow">On the job</p>
+      <h2 class="mt-3">Real guards. Real sites.</h2>
+      <p class="mt-3 max-w-2xl text-ink-soft">These are our own guards at work across the GTA. No stock photos.</p>
+      <div class="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
+        {onTheJob.slice(0, 4).map((p) => <img src={p.src} alt={p.alt} width="640" height="640" loading="lazy" class="aspect-square w-full rounded-2xl object-cover" />)}
+      </div>
+    </div>
+  </section>
 
   <!-- Services: guarding -->
   <section class="section">

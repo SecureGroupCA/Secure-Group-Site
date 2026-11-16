@@ -5,6 +5,7 @@ import Icon from '@/components/Icon.astro';
 import Faq from '@/components/Faq.astro';
 import { site } from '@/data/site';
 import { breadcrumbs, jobPosting } from '@/lib/schema';
+import { photos } from '@/data/photos';
 const faqs = [
   { q: 'Do I need a licence before I apply?', a: 'Yes. You need a valid Ontario security guard licence. If you do not have one yet, you must take the 40-hour approved course and pass the provincial test first.' },
   { q: 'What shifts do you have?', a: 'Days, nights and weekends across Vaughan, Toronto and the GTA. Full-time and part-time.' },
@@ -14,6 +15,9 @@ const faqs = [
 ---
 <Base title="Security Guard Jobs in Vaughan & the GTA | Careers at Secure Group" description="Hiring licensed Ontario security guards for full-time and part-time shifts in Vaughan, Toronto and the GTA. Steady hours, supplied uniform, supervisors who back you up. Apply online." schemas={[breadcrumbs([{ name: 'Careers', path: '/careers' }]), jobPosting()]}>
   <PageHero eyebrow="Careers" title="Licensed guards: we are hiring." lead="Steady shifts, a uniform that fits, and a supervisor who picks up the phone. If you are licensed in Ontario and reliable, we want to talk." crumbs={[{ name: 'Careers', path: '/careers' }]} dark />
+  <section class="wrap pt-14">
+    <img src={photos.teamPatrol.src} alt={photos.teamPatrol.alt} width="640" height="640" loading="eager" class="mx-auto aspect-[4/3] w-full max-w-3xl rounded-2xl object-cover object-[50%_30%]" />
+  </section>
   <section class="section">
     <div class="wrap grid gap-14 lg:grid-cols-[1fr_1fr]">
       <div>

@@ -1,3 +1,5 @@
+import { photos, type Photo } from './photos';
+
 export interface Service {
   slug: string;
   name: string;
@@ -12,11 +14,13 @@ export interface Service {
   howItWorks: { step: string; text: string }[];
   faqs: { q: string; a: string }[];
   priceNote: string;
+  photo?: Photo;            // optional real photo shown on the service page
 }
 
 export const services: Service[] = [
   {
     slug: 'security-guards',
+    photo: photos.teamUniform,
     group: 'guarding',
     name: 'Security Guards',
     short: 'A trained, licensed guard at your door, lobby, gate or site. Any shift, any day.',
@@ -54,6 +58,7 @@ export const services: Service[] = [
   },
   {
     slug: 'mobile-patrol',
+    photo: photos.patrolCars,
     group: 'guarding',
     name: 'Mobile Patrol',
     short: 'A marked patrol vehicle visits your property at random times through the night.',
@@ -90,6 +95,7 @@ export const services: Service[] = [
   },
   {
     slug: 'construction-site-security',
+    photo: photos.constructionFence,
     group: 'guarding',
     name: 'Construction Site Security',
     short: 'Guards and cameras that stop theft, trespassing and vandalism on your job site.',
@@ -126,6 +132,7 @@ export const services: Service[] = [
   },
   {
     slug: 'condo-security',
+    photo: photos.condoLobby,
     group: 'guarding',
     name: 'Condo & Building Security',
     short: 'Friendly, professional guards for your lobby, parking garage and common areas.',
