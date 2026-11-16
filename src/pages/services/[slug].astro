@@ -53,6 +53,13 @@ const others = services.filter((x) => x.slug !== s.slug).slice(0, 3);
           <p class="mt-1 text-sm text-ink-soft">Reply within one business hour.</p>
           <div class="mt-5"><QuoteForm compact subject={`Quote: ${s.name}`} preselect={s.name} /></div>
         </div>
+        {(s.slug === 'fire-alarm-monitoring' || s.slug === 'alarm-monitoring') && (
+          <div class="card">
+            <p class="eyebrow">Licensed monitoring</p>
+            <p class="mt-3 text-[0.97rem]">Monitoring is done through a ULC-listed station.</p>
+            <p class="mt-1 text-sm text-ink-soft">ULC licence {site.ulc.number}</p>
+          </div>
+        )}
         <div class="card">
           <p class="eyebrow">Good for</p>
           <ul class="mt-3 flex flex-wrap gap-2">

@@ -82,6 +82,6 @@ Many clients use a guard by day and a monitored alarm with patrol by night. That
 
 ## What we charge
 
-We give one clear hourly rate for the exact hours you need. No hidden fees, no long contracts. Most quotes go out within one business hour.
+The numbers above are what the market charges. We price every site on its own, because a condo lobby and a construction gate are not the same job. You get one clear hourly rate for the exact hours you need. No hidden fees, no long contracts. Most quotes go out within one business hour.
 
 [Get a quote for security guards](/services/security-guards) or call us at 416-751-1894. If a cheaper option will do the job, we will tell you.

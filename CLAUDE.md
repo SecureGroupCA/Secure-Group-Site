@@ -8,6 +8,8 @@ Static Astro site for secure-group.ca. Hosted on Netlify. No CMS, no database. C
 - **Vaughan first.** Vaughan is the main city we want to rank in. Mention Vaughan naturally in posts. Mississauga and Bradford come next.
 - **Never invent facts** about the company (licence numbers, client names, review quotes, years). Placeholders are marked in `src/data/site.ts` and on the home page.
 - **Never advertise camera monitoring or video monitoring.** The company is not allowed to. Cameras = installation only (homes and businesses). Alarm monitoring (burglar) and fire alarm monitoring are fine and should be promoted.
+- **No prices on service pages.** The owner wants people to call. Blog posts may quote market ranges as education, but never "we charge $X".
+- **Never name the alarm or camera manufacturer or the monitoring station.** The company is a dealer. Only the ULC licence number may be shown (it lives in `src/data/site.ts`).
 - Keep the design minimal: black, warm white, gold accent. No sliders, no stock-photo clutter, no page builders.
 
 ## Where things live

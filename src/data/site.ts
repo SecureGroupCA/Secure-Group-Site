@@ -20,6 +20,8 @@ export const site = {
   /** TODO from client: PSISA agency licence number, then set verified: true */
   licence: { number: 'PSISA Agency Licence # on file', verified: false },
   insurance: 'Fully insured with general liability coverage',
+  /** TODO from client: ULC licence number for the monitoring station, then set verified: true */
+  ulc: { number: 'ULC-XXXXXX', verified: false },
   serviceArea: 'Vaughan, Toronto, Mississauga, Brampton, Markham, Richmond Hill and Bradford',
   url: 'https://secure-group.ca',
   responseTime: 'Guards on site in as little as 2 hours',

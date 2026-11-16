@@ -50,7 +50,7 @@ export const services: Service[] = [
       { q: 'Is there a minimum booking?', a: 'Most shifts are 4 hours or more. Call us and we will find something that works.' },
       { q: 'Can the guard be armed?', a: 'No. Security guards in Ontario do not carry firearms. Our guards are trained to observe, report, de-escalate and call police when needed.' },
     ],
-    priceNote: 'Security guard rates in the GTA usually run from $25 to $45 per hour depending on the site, the hours and the training needed. We give you one clear hourly price with no hidden fees.',
+    priceNote: 'Every site is different, so we price each one. Call us with the address and the hours and you will have one clear hourly price with no hidden fees, usually within the hour.',
   },
   {
     slug: 'mobile-patrol',
@@ -175,7 +175,7 @@ export const services: Service[] = [
       'We can monitor most existing alarm panels, or install a new one.',
     ],
     whatYouGet: [
-      '24-hour monitoring station',
+      '24-hour ULC-listed monitoring station',
       'Phone call to you the moment the alarm trips',
       'Police or guard dispatch, your choice',
       'Works with most existing alarm panels',
@@ -191,7 +191,7 @@ export const services: Service[] = [
     ],
     faqs: [
       { q: 'Can you monitor the alarm I already have?', a: 'Most of the time, yes. We check your panel and tell you. If it is too old, we replace it.' },
-      { q: 'How much does alarm monitoring cost?', a: 'A small monthly fee. Call us and we will give you the exact number for your system.' },
+      { q: 'How much does alarm monitoring cost?', a: 'A low monthly fee. Call us and we will give you the exact number for your system.' },
       { q: 'What happens on a false alarm?', a: 'The station calls you first. If you say it is a false alarm and give your password, nothing else happens.' },
       { q: 'Can a guard come instead of police?', a: 'Yes. Many clients pick our guard as the first response. See our alarm response service.' },
     ],
@@ -215,6 +215,7 @@ export const services: Service[] = [
       '24-hour fire alarm monitoring station',
       'Fire department dispatched on an alarm signal',
       'Trouble and supervisory signals reported to you',
+      'ULC-listed monitoring station',
       'Monitoring records for your fire inspector and insurer',
       'Works with most fire alarm panels',
       'Set-up handled with your fire alarm technician',
@@ -230,6 +231,7 @@ export const services: Service[] = [
       { q: 'Is fire alarm monitoring required?', a: 'For many commercial and multi-unit buildings in Ontario, yes. Your fire inspector or insurer can confirm what your building needs. We are glad to help you check.' },
       { q: 'Can you monitor a fire alarm and a burglar alarm together?', a: 'Yes. Many buildings put both on one monitoring account.' },
       { q: 'Do you provide a monitoring certificate?', a: 'Yes. We provide the paperwork your fire inspector and insurer ask for.' },
+      { q: 'Is your monitoring station ULC listed?', a: 'Yes. Our monitoring is done through a ULC-listed station. Ask us for the ULC number any time.' },
     ],
     priceNote: 'Fire alarm monitoring is a flat monthly fee per building.',
   },
@@ -263,12 +265,12 @@ export const services: Service[] = [
       { step: 'App on your phone', text: 'We set it up and show you how to use it before we leave.' },
     ],
     faqs: [
-      { q: 'How much does camera installation cost?', a: 'A basic home system with four cameras usually starts around $1,500 installed. Businesses vary by size. We quote after a short site walk.' },
+      { q: 'How much does camera installation cost?', a: 'It depends on how many cameras you need and where they go. We do a short site walk and give you one clear price. Call us and we will set it up.' },
       { q: 'Can I see my cameras on my phone?', a: 'Yes. We set up the app on your phone before we leave.' },
       { q: 'Do you monitor the cameras for me?', a: 'No. You view and control your own cameras. If you want a live response to break-ins, ask about our alarm monitoring and alarm response services.' },
       { q: 'Do you install at homes or just businesses?', a: 'Both. Houses, condos, stores, warehouses, job sites and car lots.' },
     ],
-    priceNote: 'Camera installation is quoted per job after a site walk. Home systems usually start around $1,500 installed.',
+    priceNote: 'Camera installation is quoted per job after a short site walk. Call us and we will book it. The walk is free.',
   },
   {
     slug: 'alarm-response',
