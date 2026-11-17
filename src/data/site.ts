@@ -7,6 +7,11 @@ export const site = {
   phone: '416-751-1894',
   phoneHref: 'tel:+14167511894',
   email: 'info@secure-group.ca',
+  /** Quote and pricing requests go to both inboxes (owner, 2026-11-17).
+   *  The quote FORM is emailed by Netlify: Project configuration → Notifications → Emails and webhooks → Form submission notifications. */
+  quoteEmails: ['info@secure-group.ca', 'gs@secure-group.ca'],
+  /** mailto link for quote questions: to info@, cc gs@ */
+  quoteMailto: 'mailto:info@secure-group.ca?cc=gs@secure-group.ca&subject=Security%20quote%20request',
   address: {
     street: '90 Winges Rd, Suite 206',
     city: 'Vaughan',

@@ -15,7 +15,7 @@ import { breadcrumbs } from '@/lib/schema';
           <span class="grid h-12 w-12 place-items-center rounded-full bg-ink text-gold"><Icon name="phone" class="h-5 w-5" /></span>
           <span><span class="block font-serif text-2xl">{site.phone}</span><span class="text-sm text-ink-soft">{site.hours}</span></span>
         </a>
-        <a href={`mailto:${site.email}`} class="card flex items-center gap-5 !py-6">
+        <a href={site.quoteMailto} class="card flex items-center gap-5 !py-6">
           <span class="grid h-12 w-12 place-items-center rounded-full bg-mist"><Icon name="arrow" class="h-5 w-5" /></span>
           <span><span class="block font-serif text-xl">{site.email}</span><span class="text-sm text-ink-soft">Reply within one business hour</span></span>
         </a>

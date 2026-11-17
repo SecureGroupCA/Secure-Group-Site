@@ -13,7 +13,7 @@ const year = new Date().getFullYear();
         <p class="mt-5 max-w-sm text-sm leading-relaxed text-paper/70">Licensed security guards, patrols and monitoring across Ontario, British Columbia and Alberta. Head office in Vaughan. Since {site.founded}.</p>
         <div class="mt-6 space-y-2 text-sm">
           <p><a href={site.phoneHref} class="font-semibold hover:text-gold">{site.phone}</a> <span class="text-paper/50">· {site.hours}</span></p>
-          <p><a href={`mailto:${site.email}`} class="hover:text-gold">{site.email}</a></p>
+          <p><a href={site.quoteMailto} class="hover:text-gold">{site.email}</a></p>
           <p class="text-paper/70">{site.address.street}, {site.address.city}, {site.address.province} {site.address.postal}</p>
           {site.licence.verified && <p class="text-paper/70">PSISA agency licence #{site.licence.number}</p>}
         </div>

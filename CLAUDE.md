@@ -40,4 +40,4 @@ Categories allowed: Prices, Hiring a company, Construction, Condos, Retail, Ware
 - `npm run build` — builds to `dist/`. Must pass before any push.
 
 ## Forms
-Quote and job-application forms use Netlify Forms. After the first deploy, open Netlify → Forms and set the notification email to info@secure-group.ca.
+Quote and job-application forms use Netlify Forms. After the first deploy, open Netlify → Project configuration → Notifications → Form submission notifications and add one email notification each for info@secure-group.ca and gs@secure-group.ca (owner wants quote requests in both inboxes).
