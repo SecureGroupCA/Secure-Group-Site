@@ -7,6 +7,8 @@ export const site = {
   phone: '416-751-1894',
   phoneHref: 'tel:+14167511894',
   email: 'info@secure-group.ca',
+  /** Job applications and resumes (owner, 2026-11-17). Netlify also emails the "apply" form to hr@ and info@. */
+  hrEmail: 'hr@secure-group.ca',
   /** Quote and pricing requests go to both inboxes (owner, 2026-11-17).
    *  The quote FORM is emailed by Netlify: Project configuration → Notifications → Emails and webhooks → Form submission notifications. */
   quoteEmails: ['info@secure-group.ca', 'gs@secure-group.ca'],

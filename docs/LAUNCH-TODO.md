@@ -13,7 +13,7 @@
 | 9 | Google Business Profile: confirm ownership at 90 Winges Rd | Google | ☐ |
 | 10 | Kill/update old Scarborough listing on Yellow Pages (11-380 Tapscott Rd) | Yellow Pages, Bing, Apple Maps | ☐ |
 | 11 | An OG image (1200×630) for social sharing | `public/og.png` | ☐ |
-| 12 | Netlify Forms notification emails for the "quote" form: info@secure-group.ca AND gs@secure-group.ca (one notification each). Make sure form detection is on | Netlify → Project configuration → Notifications | ☐ |
+| 12 | Netlify Forms notification emails for the "quote" form: info@secure-group.ca AND gs@secure-group.ca (one notification each). Make sure form detection is on | Netlify → Project configuration → Notifications | ◐ 2026-11-17: set up. quote → gs@ + info@, apply → hr@ + info@. Each inbox must click the Netlify confirm email, then send a TEST quote |
 | 13 | ULC licence number for the monitoring station (do NOT name the manufacturer or station on the site) | `src/data/site.ts` → `ulc.number`, set `verified: true` | ✅ 2026-11-16 (17515) |
 | 14 | Prices: owner chose NOT to show prices on service pages. The blog price guide shows market ranges only. Confirm he is okay with that post staying up. | `src/content/blog/how-much-...md` | ✅ 2026-11-16: owner said no. Post removed, old URL 301s to `/services/security-guards` |
 | 15 | BC security business licence number | `src/data/provinces.ts` → `british-columbia` → `licence.number`, set `verified: true` | ☐ OPTIONAL (owner, 2026-11-17): not mandatory to show on the site. Remind the owner when they ask what is left |
