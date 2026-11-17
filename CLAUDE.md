@@ -2,6 +2,12 @@
 
 Static Astro site for secure-group.ca. Serves Ontario, British Columbia and Alberta (head office in Vaughan, ON). Hosted on Netlify. No CMS, no database. Content lives in files.
 
+## Open reminders (tell the owner at the start of the next session, then delete this section when done)
+Added 2026-11-17 at the owner's request. Use simple, grade-5 English.
+1. **Netlify deploys are paused.** The team ran out of build credits. The test site stays online, but changes pushed after that (three provinces, all services in BC/AB, quote email links, Careers hr@ email) are not live until the owner upgrades the Netlify team or the next billing cycle starts. Never upgrade for them. After deploys resume, check the test site shows the latest commit.
+2. **Confirm form emails.** In Gmail, gs@, info@ and hr@ must each click Netlify's confirmation email (check Spam). Then send a TEST quote from /contact and check gs@ and info@ both got it.
+3. Optional only, when the owner asks what is left: BC and Alberta licence numbers (not mandatory to show).
+
 ## Rules for every change
 - **Plain English only.** Grade-5 reading level. Short sentences. No jargon. If a 10-year-old would not understand a sentence, rewrite it.
 - **Positive tone.** Facts about risk are fine. Fear-mongering and scolding are not.
