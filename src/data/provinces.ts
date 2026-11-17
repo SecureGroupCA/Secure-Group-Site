@@ -39,7 +39,7 @@ export const provinces: Province[] = [
     ],
     licence: { label: 'Ontario PSISA agency licence', number: site.licence.number, verified: site.licence.verified, regulator: 'Ontario Ministry of the Solicitor General', checkUrl: 'https://www.ontario.ca/page/private-security-and-investigative-services' },
     guardLicence: 'a valid Ontario security guard licence',
-    topServices: ['security-guards', 'mobile-patrol', 'construction-site-security', 'condo-security', 'alarm-monitoring', 'fire-alarm-monitoring'],
+    topServices: ['security-guards', 'mobile-patrol', 'construction-site-security', 'condo-security', 'alarm-monitoring', 'fire-alarm-monitoring', 'camera-installation', 'alarm-response', 'investigations', 'clean-up'],
     topSectors: ['construction', 'condos-and-residential', 'industrial-and-warehouse', 'property-management', 'retail', 'automotive'],
     faqs: [
       { q: 'Where is your Ontario office?', a: 'Our head office is at 90 Winges Rd, Suite 206, in Vaughan.' },
@@ -63,7 +63,7 @@ export const provinces: Province[] = [
     ],
     licence: { label: 'BC security business licence', number: '', verified: false, regulator: 'BC Security Programs Division', checkUrl: 'https://www2.gov.bc.ca/gov/content/employment-business/business/security-services' },
     guardLicence: 'a valid BC security worker licence',
-    topServices: ['security-guards', 'mobile-patrol', 'construction-site-security', 'condo-security', 'alarm-response', 'investigations'],
+    topServices: ['security-guards', 'mobile-patrol', 'construction-site-security', 'condo-security', 'alarm-monitoring', 'fire-alarm-monitoring', 'camera-installation', 'alarm-response', 'investigations', 'clean-up'],
     topSectors: ['construction', 'condos-and-residential', 'industrial-and-warehouse', 'retail', 'property-management', 'hospitality'],
     faqs: [
       { q: 'Are you licensed in British Columbia?', a: 'Yes. Secure Group holds a BC security business licence, and every guard we send holds a valid BC security worker licence.' },
@@ -87,7 +87,7 @@ export const provinces: Province[] = [
     ],
     licence: { label: 'Alberta security services business licence', number: '', verified: false, regulator: 'Alberta Security Programs', checkUrl: 'https://www.alberta.ca/security-profession-licences-permits' },
     guardLicence: 'a valid Alberta security services licence',
-    topServices: ['security-guards', 'mobile-patrol', 'construction-site-security', 'alarm-response', 'condo-security', 'investigations'],
+    topServices: ['security-guards', 'mobile-patrol', 'construction-site-security', 'condo-security', 'alarm-monitoring', 'fire-alarm-monitoring', 'camera-installation', 'alarm-response', 'investigations', 'clean-up'],
     topSectors: ['construction', 'industrial-and-warehouse', 'property-management', 'retail', 'automotive', 'condos-and-residential'],
     faqs: [
       { q: 'Are you licensed in Alberta?', a: 'Yes. Secure Group holds an Alberta security services business licence, and every guard we send holds a valid Alberta security services licence.' },

@@ -354,7 +354,7 @@ export const areas: Area[] = [
       'Condo towers need front-desk guards who are good with residents.',
       'Construction sites need night and weekend coverage to stop tool and copper theft.',
     ],
-    topServices: ['security-guards', 'condo-security', 'construction-site-security', 'mobile-patrol', 'alarm-response'],
+    topServices: ['security-guards', 'condo-security', 'construction-site-security', 'mobile-patrol', 'alarm-response', 'alarm-monitoring', 'fire-alarm-monitoring', 'camera-installation'],
     topSectors: ['condos-and-residential', 'retail', 'construction', 'hospitality', 'property-management'],
     faqs: [
       { q: 'Are your Vancouver guards licensed?', a: 'Yes. Every guard holds a valid BC security worker licence.' },
@@ -380,7 +380,7 @@ export const areas: Area[] = [
       'New towers in City Centre need construction site coverage, then lobby guards.',
       'Plazas use mobile patrol after close.',
     ],
-    topServices: ['security-guards', 'mobile-patrol', 'construction-site-security', 'alarm-response'],
+    topServices: ['security-guards', 'mobile-patrol', 'construction-site-security', 'alarm-response', 'alarm-monitoring', 'fire-alarm-monitoring', 'camera-installation'],
     topSectors: ['industrial-and-warehouse', 'construction', 'retail', 'condos-and-residential'],
     faqs: [
       { q: 'Are your Surrey guards licensed?', a: 'Yes. Every guard holds a valid BC security worker licence.' },
@@ -406,7 +406,7 @@ export const areas: Area[] = [
       'Stores and malls use loss-prevention guards.',
       'Industrial sites in Big Bend use gate guards and night patrols.',
     ],
-    topServices: ['condo-security', 'security-guards', 'construction-site-security', 'mobile-patrol'],
+    topServices: ['condo-security', 'security-guards', 'construction-site-security', 'mobile-patrol', 'alarm-monitoring', 'fire-alarm-monitoring', 'camera-installation'],
     topSectors: ['condos-and-residential', 'retail', 'construction', 'industrial-and-warehouse'],
     faqs: [
       { q: 'Are your Burnaby guards licensed?', a: 'Yes. Every guard holds a valid BC security worker licence.' },
@@ -432,7 +432,7 @@ export const areas: Area[] = [
       'Shopping centres use loss-prevention guards.',
       'Farms and yards in East Richmond use mobile patrol.',
     ],
-    topServices: ['security-guards', 'mobile-patrol', 'alarm-response', 'condo-security'],
+    topServices: ['security-guards', 'mobile-patrol', 'alarm-response', 'condo-security', 'alarm-monitoring', 'fire-alarm-monitoring', 'camera-installation'],
     topSectors: ['industrial-and-warehouse', 'retail', 'condos-and-residential', 'hospitality'],
     faqs: [
       { q: 'Are your Richmond guards licensed?', a: 'Yes. Every guard holds a valid BC security worker licence.' },
@@ -458,7 +458,7 @@ export const areas: Area[] = [
       'Warehouses and distribution sites need gate guards.',
       'New subdivisions need construction site coverage.',
     ],
-    topServices: ['mobile-patrol', 'security-guards', 'construction-site-security', 'alarm-response'],
+    topServices: ['mobile-patrol', 'security-guards', 'construction-site-security', 'alarm-response', 'alarm-monitoring', 'fire-alarm-monitoring', 'camera-installation'],
     topSectors: ['industrial-and-warehouse', 'construction', 'retail', 'automotive'],
     faqs: [
       { q: 'Can you patrol a farm property?', a: 'Yes. Scheduled patrols and site checks work well for farms and rural yards.' },
@@ -484,7 +484,7 @@ export const areas: Area[] = [
       'Hotels, wineries and summer events use polite, well-dressed event guards.',
       'Plazas and lots use mobile patrol after close.',
     ],
-    topServices: ['construction-site-security', 'security-guards', 'mobile-patrol', 'condo-security'],
+    topServices: ['construction-site-security', 'security-guards', 'mobile-patrol', 'condo-security', 'alarm-monitoring', 'fire-alarm-monitoring', 'camera-installation'],
     topSectors: ['construction', 'hospitality', 'condos-and-residential', 'retail'],
     faqs: [
       { q: 'Do you provide event security in Kelowna?', a: 'Yes. Weddings, winery events, festivals and private parties.' },
@@ -510,7 +510,7 @@ export const areas: Area[] = [
       'New construction in Langford and Colwood needs night and weekend coverage.',
       'Public and office buildings need lobby guards and after-hours checks.',
     ],
-    topServices: ['security-guards', 'condo-security', 'construction-site-security', 'mobile-patrol'],
+    topServices: ['security-guards', 'condo-security', 'construction-site-security', 'mobile-patrol', 'alarm-monitoring', 'fire-alarm-monitoring', 'camera-installation'],
     topSectors: ['government', 'hospitality', 'retail', 'construction'],
     faqs: [
       { q: 'Do you cover Saanich and Langford?', a: 'Yes. Victoria, Saanich, Oak Bay, Esquimalt, Langford and Colwood.' },
@@ -538,7 +538,7 @@ export const areas: Area[] = [
       'New communities on the edges of the city need construction site coverage.',
       'Office towers downtown need lobby guards and after-hours checks.',
     ],
-    topServices: ['security-guards', 'construction-site-security', 'mobile-patrol', 'alarm-response', 'condo-security'],
+    topServices: ['security-guards', 'construction-site-security', 'mobile-patrol', 'alarm-response', 'condo-security', 'alarm-monitoring', 'fire-alarm-monitoring', 'camera-installation'],
     topSectors: ['industrial-and-warehouse', 'construction', 'property-management', 'retail', 'automotive'],
     faqs: [
       { q: 'Are your Calgary guards licensed?', a: 'Yes. Every guard holds a valid Alberta security services licence.' },
@@ -564,7 +564,7 @@ export const areas: Area[] = [
       'New neighbourhoods need construction site coverage at night and on weekends.',
       'Retail areas use mobile patrol after close.',
     ],
-    topServices: ['security-guards', 'construction-site-security', 'mobile-patrol', 'alarm-response'],
+    topServices: ['security-guards', 'construction-site-security', 'mobile-patrol', 'alarm-response', 'alarm-monitoring', 'fire-alarm-monitoring', 'camera-installation'],
     topSectors: ['industrial-and-warehouse', 'construction', 'retail', 'automotive'],
     faqs: [
       { q: 'Do you cover Sherwood Park and Nisku?', a: 'Yes. Edmonton, Sherwood Park, Nisku, Leduc and nearby towns.' },
@@ -589,7 +589,7 @@ export const areas: Area[] = [
       'Industrial and oilfield service yards need gate guards and overnight patrols.',
       'New construction along the highway needs night and weekend coverage.',
     ],
-    topServices: ['mobile-patrol', 'security-guards', 'construction-site-security', 'alarm-response'],
+    topServices: ['mobile-patrol', 'security-guards', 'construction-site-security', 'alarm-response', 'alarm-monitoring', 'fire-alarm-monitoring', 'camera-installation'],
     topSectors: ['industrial-and-warehouse', 'construction', 'automotive', 'retail'],
     faqs: [
       { q: 'Can you patrol an industrial yard?', a: 'Yes. Scheduled patrols and overnight gate guards are some of our most common jobs.' },
@@ -614,7 +614,7 @@ export const areas: Area[] = [
       'Farms, food plants and yards use patrols to stop equipment and fuel theft.',
       'New homes on the west side need construction site coverage.',
     ],
-    topServices: ['mobile-patrol', 'security-guards', 'construction-site-security', 'alarm-response'],
+    topServices: ['mobile-patrol', 'security-guards', 'construction-site-security', 'alarm-response', 'alarm-monitoring', 'fire-alarm-monitoring', 'camera-installation'],
     topSectors: ['industrial-and-warehouse', 'construction', 'retail', 'property-management'],
     faqs: [
       { q: 'Can you patrol a farm or food plant?', a: 'Yes. Scheduled patrols and gate guards work well for farms, plants and yards.' },
