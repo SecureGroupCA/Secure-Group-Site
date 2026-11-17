@@ -25,9 +25,9 @@ export const services: Service[] = [
     name: 'Security Guards',
     short: 'A trained, licensed guard at your door, lobby, gate or site. Any shift, any day.',
     icon: 'shield',
-    seoTitle: 'Security Guard Services in Vaughan & the GTA | Secure Group',
+    seoTitle: 'Security Guard Services in Ontario, BC & Alberta | Secure Group',
     description:
-      'Licensed, uniformed security guards in Vaughan and across the GTA. On site in as little as 2 hours. Hourly, daily or long-term. Call 416-751-1894 for a quote.',
+      'Licensed, uniformed security guards across Ontario, British Columbia and Alberta. In the GTA, on site in as little as 2 hours. Hourly, daily or long-term. Call 416-751-1894 for a quote.',
     intro: [
       'A security guard is the simplest way to keep people and property safe. Someone is there, awake, watching, and ready to act.',
       'Every guard we send holds a valid Ontario security licence. They are trained, in uniform, and checked by a supervisor during each shift.',
@@ -63,9 +63,9 @@ export const services: Service[] = [
     name: 'Mobile Patrol',
     short: 'A marked patrol vehicle visits your property at random times through the night.',
     icon: 'car',
-    seoTitle: 'Mobile Security Patrol Services in Vaughan & GTA | Secure Group',
+    seoTitle: 'Mobile Security Patrol Services in Ontario, BC & Alberta | Secure Group',
     description:
-      'Marked mobile patrol checks for parking lots, plazas, truck yards and empty buildings across Vaughan and the GTA. A low-cost way to show a security presence. Call 416-751-1894.',
+      'Marked mobile patrol checks for parking lots, plazas, truck yards and empty buildings across Ontario, British Columbia and Alberta. A low-cost way to show a security presence. Call 416-751-1894.',
     intro: [
       'A mobile patrol is a guard in a marked vehicle who visits your property several times a night. Each visit is random, so nobody can predict it.',
       'It costs much less than a guard on site all night. It works well for parking lots, plazas, truck yards, and buildings that are empty after hours.',
@@ -100,9 +100,9 @@ export const services: Service[] = [
     name: 'Construction Site Security',
     short: 'Guards and cameras that stop theft, trespassing and vandalism on your job site.',
     icon: 'crane',
-    seoTitle: 'Construction Site Security in Vaughan & Toronto | Secure Group',
+    seoTitle: 'Construction Site Security in Ontario, BC & Alberta | Secure Group',
     description:
-      'Construction site security guards, gate control, night patrols and camera installation for high-rise and low-rise builds across Vaughan and the GTA. Stop tool theft and trespassing. Call 416-751-1894.',
+      'Construction site security guards, gate control, night patrols and camera installation for high-rise and low-rise builds across Ontario, British Columbia and Alberta. Stop tool theft and trespassing. Call 416-751-1894.',
     intro: [
       'Job sites are a top target for theft. Copper, tools, and equipment go missing at night and on weekends. Trespassers get hurt and the builder gets sued.',
       'We have protected construction sites across Vaughan and the GTA since 2014. We know how gates, trades, deliveries and inspections work.',
@@ -137,9 +137,9 @@ export const services: Service[] = [
     name: 'Condo & Building Security',
     short: 'Friendly, professional guards for your lobby, parking garage and common areas.',
     icon: 'building',
-    seoTitle: 'Condo Security Guards & Concierge in Vaughan & Toronto | Secure Group',
+    seoTitle: 'Condo Security Guards & Concierge in Ontario, BC & Alberta | Secure Group',
     description:
-      'Condo security guards and concierge staff for lobbies, parking garages and common areas in Vaughan, Toronto and the GTA. Residents feel safe, boards get clear reports. Call 416-751-1894.',
+      'Condo security guards and concierge staff for lobbies, parking garages and common areas across Ontario, British Columbia and Alberta. Residents feel safe, boards get clear reports. Call 416-751-1894.',
     intro: [
       'Residents want to feel safe walking into their building at night. Boards want fewer complaints and clear reports.',
       'Our condo guards greet residents, check visitors, patrol the garage and respond to problems. They know the building rules and follow them every time.',
@@ -173,9 +173,9 @@ export const services: Service[] = [
     group: 'systems',
     short: 'Your burglar alarm is watched 24 hours a day. If it trips, help is sent.',
     icon: 'bell',
-    seoTitle: 'Burglar Alarm Monitoring in Vaughan & the GTA | Secure Group',
+    seoTitle: 'Burglar Alarm Monitoring in Ontario, BC & Alberta | Secure Group',
     description:
-      '24-hour burglar alarm monitoring for homes and businesses in Vaughan and the GTA. When your alarm trips, the monitoring station calls you and sends help. Call 416-751-1894.',
+      '24-hour burglar alarm monitoring for homes and businesses across Ontario, British Columbia and Alberta. When your alarm trips, the monitoring station calls you and sends help. Call 416-751-1894.',
     intro: [
       'An alarm that only makes noise is not enough. Someone has to hear it and act.',
       'With alarm monitoring, your burglar alarm is connected to a monitoring station that is staffed 24 hours a day. When the alarm trips, the station calls you, calls the police, or sends our guard, depending on the plan you choose.',
@@ -210,9 +210,9 @@ export const services: Service[] = [
     group: 'systems',
     short: 'Your fire alarm is connected to a station that calls the fire department fast.',
     icon: 'flame',
-    seoTitle: 'Fire Alarm Monitoring for Buildings in Vaughan & the GTA | Secure Group',
+    seoTitle: 'Fire Alarm Monitoring for Buildings in Ontario, BC & Alberta | Secure Group',
     description:
-      'Fire alarm monitoring for commercial buildings, condos, plazas and warehouses in Vaughan and the GTA. The station sends the fire department the moment your alarm trips. Call 416-751-1894.',
+      'Fire alarm monitoring for commercial buildings, condos, plazas and warehouses across Ontario, British Columbia and Alberta. The station sends the fire department the moment your alarm trips. Call 416-751-1894.',
     intro: [
       'Many commercial buildings in Ontario must have their fire alarm connected to a monitoring station. It is in the Fire Code, and your insurer will ask about it.',
       'When your fire alarm trips, the station sees it right away and calls the fire department. Nobody has to be in the building for help to come.',
@@ -248,9 +248,9 @@ export const services: Service[] = [
     group: 'systems',
     short: 'Security cameras for your home or business, installed right, viewable on your phone.',
     icon: 'camera',
-    seoTitle: 'Security Camera Installation for Homes & Businesses in Vaughan & GTA | Secure Group',
+    seoTitle: 'Security Camera Installation for Homes & Businesses in Ontario, BC & Alberta | Secure Group',
     description:
-      'Professional security camera installation for homes and businesses in Vaughan and the GTA. Clear 4K video, night vision, and viewing on your phone. Call 416-751-1894 for a quote.',
+      'Professional security camera installation for homes and businesses across Ontario, British Columbia and Alberta. Clear 4K video, night vision, and viewing on your phone. Call 416-751-1894 for a quote.',
     intro: [
       'Good cameras do three things. They make people think twice. They record what happened. And they let you check your property from your phone, any time.',
       'We design and install camera systems for homes, condos, stores, warehouses, job sites and car lots. Clean wiring, the right camera for each spot, and a simple app you can actually use.',
@@ -286,9 +286,9 @@ export const services: Service[] = [
     name: 'Alarm Response',
     short: 'When your alarm goes off at 3 a.m., we go so you do not have to.',
     icon: 'bell',
-    seoTitle: 'Alarm Response Services in Vaughan & GTA | Secure Group',
+    seoTitle: 'Alarm Response Services in Ontario, BC & Alberta | Secure Group',
     description:
-      'Fast alarm response in Vaughan and the GTA. A licensed officer checks your property after an alarm, secures it, and reports to you. Call 416-751-1894.',
+      'Fast alarm response across Ontario, British Columbia and Alberta. A licensed officer checks your property after an alarm, secures it, and reports to you. Call 416-751-1894.',
     intro: [
       'Alarm companies call you when an alarm trips. Then it is your problem. You drive over in the dark, alone, not knowing what you will find.',
       'With alarm response, we go instead. A licensed officer checks the property, looks for damage or break-in, secures the site, and sends you a report with photos.',
@@ -322,9 +322,9 @@ export const services: Service[] = [
     name: 'Investigations & Executive Protection',
     short: 'Private investigators and close protection for people and companies who need discretion.',
     icon: 'eye',
-    seoTitle: 'Private Investigations & Executive Protection in the GTA | Secure Group',
+    seoTitle: 'Private Investigations & Executive Protection in Ontario, BC & Alberta | Secure Group',
     description:
-      'Licensed private investigators and executive protection in Vaughan and the GTA. Workplace investigations, surveillance, and close protection for executives and families. Call 416-751-1894.',
+      'Licensed private investigators and executive protection across Ontario, British Columbia and Alberta. Workplace investigations, surveillance, and close protection for executives and families. Call 416-751-1894.',
     intro: [
       'Some problems need quiet, careful work. Theft inside a company. A threat against an executive. A claim that needs checking.',
       'Our licensed investigators gather facts and give you a clear written report you can act on. Our protection officers keep people safe at meetings, events and while travelling.',
@@ -360,7 +360,7 @@ export const services: Service[] = [
     icon: 'broom',
     seoTitle: 'Property Clean-Up & Site Securing After Damage | Secure Group',
     description:
-      'Clean-up and site securing after break-ins, vandalism, floods or fire in Vaughan and the GTA. Board-up, debris removal and a guard on site. Call 416-751-1894.',
+      'Clean-up and site securing after break-ins, vandalism, floods or fire across Ontario, British Columbia and Alberta. Board-up, debris removal and a guard on site. Call 416-751-1894.',
     intro: [
       'After a break-in, a fire or a flood, a property is open and unsafe. Doors are broken, glass is everywhere, and more damage can happen that night.',
       'We board up, clean up, remove debris, and put a guard on site until the property is secure again.',

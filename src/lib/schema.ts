@@ -22,7 +22,7 @@ export const organization = () => ({
   },
   geo: { '@type': 'GeoCoordinates', latitude: site.geo.lat, longitude: site.geo.lng },
   openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens: '00:00', closes: '23:59' }],
-  areaServed: ['Vaughan', 'Toronto', 'Mississauga', 'Brampton', 'Markham', 'Richmond Hill', 'Bradford West Gwillimbury'].map((n) => ({ '@type': 'City', name: n })),
+  areaServed: ['Ontario', 'British Columbia', 'Alberta'].map((n) => ({ '@type': 'State', name: n, containedInPlace: { '@type': 'Country', name: 'Canada' } })),
   priceRange: '$$',
 });
 
@@ -35,7 +35,7 @@ export const website = () => ({
   publisher: { '@id': `${site.url}/#organization` },
 });
 
-export const service = (name: string, description: string, path: string, area?: string) => ({
+export const service = (name: string, description: string, path: string, area?: string, areaType: "City" | "State" = "City") => ({
   '@context': 'https://schema.org',
   '@type': 'Service',
   name,
@@ -43,7 +43,7 @@ export const service = (name: string, description: string, path: string, area?: 
   url: `${site.url}${path}`,
   serviceType: name,
   provider: { '@id': `${site.url}/#organization` },
-  areaServed: area ? { '@type': 'City', name: area } : site.serviceArea,
+  areaServed: area ? { '@type': areaType, name: area } : ['Ontario', 'British Columbia', 'Alberta'].map((n) => ({ '@type': 'State', name: n })),
 });
 
 export const faq = (items: { q: string; a: string }[]) => ({
@@ -76,7 +76,7 @@ export const jobPosting = () => ({
   '@context': 'https://schema.org',
   '@type': 'JobPosting',
   title: 'Licensed Security Guard',
-  description: 'Secure Group Protection Services is hiring licensed Ontario security guards for full-time and part-time shifts in Vaughan, Toronto and the GTA. Must hold a valid Ontario security guard licence.',
+  description: 'Secure Group Protection Services is hiring licensed security guards for full-time and part-time shifts in Ontario, British Columbia and Alberta. Must hold a valid security guard licence for the province you work in.',
   datePosted: '2026-11-16',
   validThrough: '2027-11-16',
   employmentType: ['FULL_TIME', 'PART_TIME'],

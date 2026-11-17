@@ -16,3 +16,8 @@
 | 12 | Netlify Forms notification email set | Netlify dashboard | ☐ |
 | 13 | ULC licence number for the monitoring station (do NOT name the manufacturer or station on the site) | `src/data/site.ts` → `ulc.number`, set `verified: true` | ✅ 2026-11-16 (17515) |
 | 14 | Prices: owner chose NOT to show prices on service pages. The blog price guide shows market ranges only. Confirm he is okay with that post staying up. | `src/content/blog/how-much-...md` | ✅ 2026-11-16: owner said no. Post removed, old URL 301s to `/services/security-guards` |
+| 15 | BC security business licence number | `src/data/provinces.ts` → `british-columbia` → `licence.number`, set `verified: true` | ☐ Owner has the licence; number to be sent |
+| 16 | Alberta security services business licence number | `src/data/provinces.ts` → `alberta` → `licence.number`, set `verified: true` | ☐ Owner has the licence; number to be sent |
+| 17 | Confirm which services are offered in BC and Alberta (alarm monitoring, fire alarm monitoring and camera installation are not listed there yet) | `src/data/provinces.ts` and BC/AB entries in `areas.ts` → `topServices` | ☐ |
+| 18 | Any BC or Alberta office address or local phone number (helps Google rank those cities) | `src/data/provinces.ts` | ☐ |
+| 19 | Google Business Profile address says 1030 Kamato Rd, Mississauga; site says 90 Winges Rd, Vaughan. Fix whichever is wrong | Google / `src/data/site.ts` | ☐ |

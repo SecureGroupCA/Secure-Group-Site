@@ -2,7 +2,8 @@
 import { site, nav } from '@/data/site';
 import Icon from './Icon.astro';
 const path = Astro.url.pathname;
-const active = (href: string) => (href === '/areas/vaughan' ? path.startsWith('/areas') : path.startsWith(href));
+const provincePaths = ['/ontario', '/british-columbia', '/alberta'];
+const active = (href: string) => (href === '/areas' ? path.startsWith('/areas') || provincePaths.some((p) => path.startsWith(p)) : path.startsWith(href));
 ---
 <header id="site-header" class="sticky top-0 z-40 border-b border-line/0 bg-paper/85 backdrop-blur-md transition-[border-color] duration-300">
   <div class="wrap flex items-center justify-between py-2.5">

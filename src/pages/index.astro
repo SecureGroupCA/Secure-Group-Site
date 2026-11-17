@@ -11,23 +11,24 @@ import { services } from '@/data/services';
 const guarding = services.filter((s) => s.group === 'guarding').slice(0, 6);
 const systems = services.filter((s) => s.group === 'systems');
 import { sectors } from '@/data/sectors';
-import { areas } from '@/data/areas';
+import { provinces } from '@/data/provinces';
+import { areasIn } from '@/data/areas';
 import { faq } from '@/lib/schema';
 import { onTheJob } from '@/data/photos';
 
 const faqs = [
-  { q: 'How fast can you send a guard?', a: 'In Vaughan and nearby cities, often within 2 hours. For planned work, we usually start the same day.' },
-  { q: 'Are your guards licensed?', a: 'Yes. Every guard holds a valid Ontario security guard licence. You can check any licence on the ServiceOntario website.' },
+  { q: 'How fast can you send a guard?', a: 'In Vaughan and the GTA, often within 2 hours. In other cities, we agree on a start date when you call.' },
+  { q: 'Are your guards licensed?', a: 'Yes. Every guard holds a valid security licence for the province they work in: Ontario, British Columbia or Alberta.' },
   { q: 'How much does a security guard cost?', a: 'It depends on the site, the hours and the training needed, so we price every job on its own. Call us with the address and the hours and you will have one clear hourly rate, no hidden fees, usually within the hour.' },
   { q: 'Do I have to sign a long contract?', a: 'No. You can book one shift, one weekend or a long-term post. Many clients start small and grow.' },
-  { q: 'Which cities do you cover?', a: `${site.serviceArea}. Our office is in Vaughan.` },
+  { q: 'Which provinces do you cover?', a: 'Ontario, British Columbia and Alberta. Our head office is in Vaughan, Ontario.' },
   { q: 'Do you install cameras at homes?', a: 'Yes. We install security cameras for houses, condos and businesses. You watch them on your phone.' },
   { q: 'Do you monitor alarms?', a: 'Yes. Burglar alarms and fire alarms are connected to a 24-hour monitoring station. When one trips, help is sent.' },
 ];
 const steps = [
   { n: '1', t: 'Call or send a quote request', d: 'Tell us the address, the hours, and what worries you.' },
   { n: '2', t: 'Get a clear plan and price', d: 'Same day. One hourly rate. No surprises.' },
-  { n: '3', t: 'Your guard arrives', d: 'In uniform, licensed, often within 2 hours.' },
+  { n: '3', t: 'Your guard arrives', d: 'In uniform and licensed. In the GTA, often within 2 hours.' },
 ];
 /**
  * Real 5-star Google reviews, copied word for word (typos kept). Collected 2026-11-16.
@@ -58,7 +59,7 @@ const reviews = [
   { text: 'Very professional and easy to work with ! A big thanks to everyone at The Secure Group !', who: 'Rajivan R.' },
 ];
 ---
-<Base title="Security Guard Company in Vaughan & the GTA | Secure Group Protection Services" description="Licensed security guards, mobile patrol, construction site security, condo security, alarm monitoring, fire alarm monitoring and camera installation in Vaughan and across the GTA. Call 416-751-1894." schemas={[faq(faqs)]}>
+<Base title="Security Guard Company in Ontario, BC & Alberta | Secure Group Protection Services" description="Licensed security guards, mobile patrol, construction site security, condo security, alarm monitoring and camera installation across Ontario, British Columbia and Alberta. Call 416-751-1894." schemas={[faq(faqs)]}>
 
   <!-- Hero -->
   <section class="relative overflow-hidden bg-ink text-paper">
@@ -68,15 +69,15 @@ const reviews = [
     </div>
     <div class="wrap relative grid gap-12 py-20 lg:grid-cols-[1.25fr_1fr] lg:items-center lg:py-28">
       <div>
-        <p class="eyebrow !text-gold">Vaughan · Toronto · The GTA · Since {site.founded}</p>
+        <p class="eyebrow !text-gold">Ontario · British Columbia · Alberta · Since {site.founded}</p>
         <h1 class="mt-5 text-display">Security guards you can call <em class="not-italic text-gold">right now.</em></h1>
-        <p class="mt-7 max-w-xl text-xl text-paper/75">Licensed, uniformed guards for your building, job site, store or event. On site in as little as 2 hours. One clear price.</p>
+        <p class="mt-7 max-w-xl text-xl text-paper/75">Licensed, uniformed guards for your building, job site, store or event, in three provinces. In the GTA, on site in as little as 2 hours. One clear price.</p>
         <div class="mt-9 flex flex-col gap-3 sm:flex-row">
           <a href={site.phoneHref} class="btn btn-gold text-lg">Call {site.phone}</a>
           <a href="/contact" class="btn btn-ghost-light">Get a written quote</a>
         </div>
         <ul class="mt-10 grid max-w-xl grid-cols-1 gap-3 text-sm text-paper/80 sm:grid-cols-3">
-          <li class="flex items-center gap-2"><Icon name="check" class="h-5 w-5 text-gold" /> Licensed in Ontario</li>
+          <li class="flex items-center gap-2"><Icon name="check" class="h-5 w-5 text-gold" /> Licensed in ON, BC and AB</li>
           <li class="flex items-center gap-2"><Icon name="check" class="h-5 w-5 text-gold" /> Open 24 hours, 7 days</li>
           <li class="flex items-center gap-2"><Icon name="check" class="h-5 w-5 text-gold" /> No long contracts</li>
         </ul>
@@ -99,7 +100,7 @@ const reviews = [
     <div class="wrap">
       <p class="eyebrow">On the job</p>
       <h2 class="mt-3">Real guards. Real sites.</h2>
-      <p class="mt-3 max-w-2xl text-ink-soft">These are our own guards at work across the GTA. No stock photos.</p>
+      <p class="mt-3 max-w-2xl text-ink-soft">These are our own guards and patrols at work. No stock photos.</p>
       <div class="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
         {onTheJob.map((p) => <img src={p.src} alt={p.alt} width="640" height="640" loading="lazy" class="aspect-square w-full rounded-2xl object-cover" />)}
       </div>
@@ -183,22 +184,25 @@ const reviews = [
     </div>
   </section>
 
-  <!-- Vaughan focus -->
+  <!-- Where we work -->
   <section class="section bg-ink text-paper">
-    <div class="wrap grid gap-12 lg:grid-cols-2 lg:items-center">
-      <div>
-        <p class="eyebrow !text-gold">Local to Vaughan</p>
-        <h2 class="mt-3">Our office is at 90 Winges Rd. We are already here.</h2>
-        <p class="mt-5 text-paper/75">When a Vaughan client calls, our guards are not driving in from across the city. We know Woodbridge, Maple, Concord, Thornhill and Kleinburg street by street.</p>
-        <a href="/areas/vaughan" class="btn btn-gold mt-8">Security guards in Vaughan</a>
-      </div>
-      <div>
-        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-paper/50">We also serve</p>
-        <ul class="mt-4 grid grid-cols-2 gap-x-6 gap-y-3">
-          {areas.filter((a) => !a.primary).map((a) => (
-            <li><a href={`/areas/${a.slug}`} class="inline-flex items-center gap-2 font-serif text-2xl hover:text-gold"><Icon name="pin" class="h-5 w-5 text-gold" /> {a.name}</a></li>
-          ))}
-        </ul>
+    <div class="wrap">
+      <p class="eyebrow !text-gold">Where we work</p>
+      <h2 class="mt-3 max-w-3xl">Three provinces. One number to call.</h2>
+      <p class="mt-5 max-w-2xl text-paper/75">Our head office is at 90 Winges Rd in Vaughan, Ontario. We are licensed in Ontario, British Columbia and Alberta, and our dispatch desk answers 24 hours a day.</p>
+      <div class="mt-12 grid gap-5 lg:grid-cols-3">
+        {provinces.map((p) => (
+          <div class="flex flex-col rounded-2xl border border-paper/10 bg-paper/[0.04] p-7">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-gold">{p.short}</p>
+            <h3 class="mt-2 font-serif text-3xl"><a href={`/${p.slug}`} class="hover:text-gold">{p.name}</a></h3>
+            <ul class="mb-8 mt-5 grid grid-cols-2 gap-x-4 gap-y-2.5">
+              {areasIn(p.slug).map((a) => (
+                <li><a href={`/areas/${a.slug}`} class="inline-flex items-center gap-2 text-paper/80 hover:text-gold"><Icon name="pin" class="h-4 w-4 shrink-0 text-gold" /> {a.name}</a></li>
+              ))}
+            </ul>
+            <a href={`/${p.slug}`} class="btn btn-gold mt-auto self-start whitespace-nowrap">Security in {p.short}</a>
+          </div>
+        ))}
       </div>
     </div>
   </section>

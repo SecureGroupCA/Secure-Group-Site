@@ -1,0 +1,32 @@
+---
+import Base from '@/layouts/Base.astro';
+import PageHero from '@/components/PageHero.astro';
+import Icon from '@/components/Icon.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import { provinces } from '@/data/provinces';
+import { areasIn } from '@/data/areas';
+import { breadcrumbs } from '@/lib/schema';
+---
+<Base title="Areas We Serve: Ontario, BC & Alberta | Secure Group Protection Services" description="Secure Group provides licensed security guards and patrols across Ontario, British Columbia and Alberta. Find your province and city." path="/areas" schemas={[breadcrumbs([{ name: 'Areas', path: '/areas' }])]}>
+  <PageHero eyebrow="Areas we serve" title="Ontario, British Columbia and Alberta." lead="Licensed guards and patrols in three provinces. Pick yours to see the cities we cover." crumbs={[{ name: 'Areas', path: '/areas' }]} />
+
+  <section class="section pt-0">
+    <div class="wrap grid gap-6 lg:grid-cols-3">
+      {provinces.map((p) => (
+        <div class="card flex flex-col">
+          <p class="eyebrow">{p.short}</p>
+          <h2 class="mt-2 text-3xl"><a href={`/${p.slug}`} class="hover:text-gold">{p.name}</a></h2>
+          <p class="mt-3 text-ink-soft">{p.lead}</p>
+          <ul class="mb-8 mt-6 space-y-2">
+            {areasIn(p.slug).map((c) => (
+              <li><a href={`/areas/${c.slug}`} class="inline-flex items-center gap-2 hover:text-gold"><Icon name="pin" class="h-4 w-4 text-gold" /> {c.name}</a></li>
+            ))}
+          </ul>
+          <a href={`/${p.slug}`} class="btn btn-ink mt-auto self-start whitespace-nowrap">Security in {p.short}</a>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <CtaBand title="Not sure if we cover your town? Call us." />
+</Base>

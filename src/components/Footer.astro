@@ -1,7 +1,8 @@
 ---
 import { site } from '@/data/site';
 import { services } from '@/data/services';
-import { areas } from '@/data/areas';
+import { provinces } from '@/data/provinces';
+import { areasIn } from '@/data/areas';
 const year = new Date().getFullYear();
 ---
 <footer class="bg-ink text-paper">
@@ -9,7 +10,7 @@ const year = new Date().getFullYear();
     <div class="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
       <div>
         <img src="/images/logo-white.png" alt={`${site.name} logo`} width="587" height="365" loading="lazy" class="h-16 w-auto" />
-        <p class="mt-5 max-w-sm text-sm leading-relaxed text-paper/70">Licensed security guards, patrols and monitoring for Vaughan and the GTA. Since {site.founded}.</p>
+        <p class="mt-5 max-w-sm text-sm leading-relaxed text-paper/70">Licensed security guards, patrols and monitoring across Ontario, British Columbia and Alberta. Head office in Vaughan. Since {site.founded}.</p>
         <div class="mt-6 space-y-2 text-sm">
           <p><a href={site.phoneHref} class="font-semibold hover:text-gold">{site.phone}</a> <span class="text-paper/50">· {site.hours}</span></p>
           <p><a href={`mailto:${site.email}`} class="hover:text-gold">{site.email}</a></p>
@@ -33,7 +34,13 @@ const year = new Date().getFullYear();
       <nav aria-label="Areas">
         <p class="eyebrow !text-gold">Areas we serve</p>
         <ul class="mt-5 space-y-2.5 text-sm">
-          {areas.map((a) => <li><a href={`/areas/${a.slug}`} class="text-paper/75 hover:text-paper">{a.name}</a></li>)}
+          {provinces.map((p) => (
+            <li>
+              <a href={`/${p.slug}`} class="font-semibold text-paper hover:text-gold">{p.name}</a>
+              <p class="mt-1 text-xs leading-relaxed text-paper/60">{areasIn(p.slug).slice(0, 5).map((a, i) => <>{i > 0 && ' · '}<a href={`/areas/${a.slug}`} class="hover:text-paper">{a.name}</a></>)}</p>
+            </li>
+          ))}
+          <li><a href="/areas" class="text-paper/75 hover:text-paper">All areas →</a></li>
         </ul>
       </nav>
       <nav aria-label="Company">
@@ -49,7 +56,7 @@ const year = new Date().getFullYear();
       </nav>
     </div>
     <div class="mt-14 flex flex-col gap-3 border-t border-paper/10 pt-6 text-xs text-paper/50 sm:flex-row sm:items-center sm:justify-between">
-      <p>© {year} {site.legalName}. Licensed under the Ontario Private Security and Investigative Services Act.</p>
+      <p>© {year} {site.legalName}. Licensed security services in Ontario, British Columbia and Alberta.</p>
       <p>{site.insurance}.</p>
     </div>
   </div>

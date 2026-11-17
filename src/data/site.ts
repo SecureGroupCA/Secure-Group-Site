@@ -3,7 +3,7 @@ export const site = {
   name: 'Secure Group Protection Services',
   shortName: 'Secure Group',
   legalName: 'Secure Group Protection Services Inc.',
-  tagline: 'Licensed security guards for Vaughan and the GTA.',
+  tagline: 'Licensed security guards across Ontario, British Columbia and Alberta.',
   phone: '416-751-1894',
   phoneHref: 'tel:+14167511894',
   email: 'info@secure-group.ca',
@@ -22,7 +22,7 @@ export const site = {
   insurance: 'Fully insured with $10 million general liability coverage',
   /** ULC licence number for the monitoring station, confirmed by the owner 2026-11-16 */
   ulc: { number: '17515', verified: true },
-  serviceArea: 'Vaughan, Toronto, Mississauga, Brampton, Markham, Richmond Hill and Bradford',
+  serviceArea: 'Ontario, British Columbia and Alberta',
   url: 'https://secure-group.ca',
   responseTime: 'Guards on site in as little as 2 hours',
   social: {
@@ -37,7 +37,7 @@ export const site = {
 export const nav = [
   { label: 'Services', href: '/services' },
   { label: 'Who We Protect', href: '/sectors' },
-  { label: 'Areas', href: '/areas/vaughan' },
+  { label: 'Areas', href: '/areas' },
   { label: 'About', href: '/about' },
   { label: 'Blog', href: '/blog' },
   { label: 'Careers', href: '/careers' },

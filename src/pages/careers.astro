@@ -7,13 +7,13 @@ import { site } from '@/data/site';
 import { breadcrumbs, jobPosting } from '@/lib/schema';
 import { photos } from '@/data/photos';
 const faqs = [
-  { q: 'Do I need a licence before I apply?', a: 'Yes. You need a valid Ontario security guard licence. If you do not have one yet, you must take the 40-hour approved course and pass the provincial test first.' },
-  { q: 'What shifts do you have?', a: 'Days, nights and weekends across Vaughan, Toronto and the GTA. Full-time and part-time.' },
+  { q: 'Do I need a licence before I apply?', a: 'Yes. You need a valid security licence for the province you will work in: Ontario, British Columbia or Alberta. Each province has its own course and test.' },
+  { q: 'What shifts do you have?', a: 'Days, nights and weekends across Ontario, British Columbia and Alberta. Full-time and part-time.' },
   { q: 'Do you provide the uniform?', a: 'Yes. Uniforms are supplied.' },
   { q: 'How fast will I hear back?', a: 'We reply to every application within two business days.' },
 ];
 ---
-<Base title="Security Guard Jobs in Vaughan & the GTA | Careers at Secure Group" description="Hiring licensed Ontario security guards for full-time and part-time shifts in Vaughan, Toronto and the GTA. Steady hours, supplied uniform, supervisors who back you up. Apply online." schemas={[breadcrumbs([{ name: 'Careers', path: '/careers' }]), jobPosting()]}>
+<Base title="Security Guard Jobs in Ontario, BC & Alberta | Careers at Secure Group" description="Hiring licensed security guards for full-time and part-time shifts in Ontario, British Columbia and Alberta. Steady hours, supplied uniform, supervisors who back you up. Apply online." schemas={[breadcrumbs([{ name: 'Careers', path: '/careers' }]), jobPosting()]}>
   <PageHero eyebrow="Careers" title="Licensed guards: we are hiring." lead="Steady shifts, a uniform that fits, and a supervisor who picks up the phone. If you are licensed in Ontario and reliable, we want to talk." crumbs={[{ name: 'Careers', path: '/careers' }]} dark />
   <section class="wrap pt-14">
     <img src={photos.teamPatrol.src} alt={photos.teamPatrol.alt} width="640" height="640" loading="eager" class="mx-auto aspect-[4/3] w-full max-w-3xl rounded-2xl object-cover object-[50%_30%]" />
@@ -23,11 +23,11 @@ const faqs = [
       <div>
         <h2>What you need</h2>
         <ul class="mt-6 space-y-3">
-          {['A valid Ontario security guard licence', 'Legally allowed to work in Canada', 'Clean background check', 'Reliable transport to sites in the GTA', 'Good English and a calm manner', 'First aid / CPR is a plus'].map((i) => <li class="flex items-start gap-3"><Icon name="check" class="mt-1 h-5 w-5 shrink-0 text-gold" />{i}</li>)}
+          {['A valid security licence for your province (ON, BC or AB)', 'Legally allowed to work in Canada', 'Clean background check', 'Reliable transport to your sites', 'Good English and a calm manner', 'First aid / CPR is a plus'].map((i) => <li class="flex items-start gap-3"><Icon name="check" class="mt-1 h-5 w-5 shrink-0 text-gold" />{i}</li>)}
         </ul>
         <h2 class="mt-12">What you get</h2>
         <ul class="mt-6 space-y-3">
-          {['Full-time and part-time shifts', 'Uniform supplied', 'Supervisors on every shift', 'Sites in Vaughan, Toronto and across the GTA', 'Training for condo, construction and gate posts', 'Room to move up to supervisor'].map((i) => <li class="flex items-start gap-3"><Icon name="check" class="mt-1 h-5 w-5 shrink-0 text-gold" />{i}</li>)}
+          {['Full-time and part-time shifts', 'Uniform supplied', 'Supervisors on every shift', 'Sites across Ontario, BC and Alberta', 'Training for condo, construction and gate posts', 'Room to move up to supervisor'].map((i) => <li class="flex items-start gap-3"><Icon name="check" class="mt-1 h-5 w-5 shrink-0 text-gold" />{i}</li>)}
         </ul>
         <p class="mt-10 text-ink-soft">Not licensed yet? Read <a href="/blog/how-to-become-a-security-guard-in-ontario" class="underline decoration-gold underline-offset-4">how to become a security guard in Ontario</a>.</p>
       </div>

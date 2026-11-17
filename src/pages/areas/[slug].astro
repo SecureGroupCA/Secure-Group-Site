@@ -7,7 +7,8 @@ import CtaBand from '@/components/CtaBand.astro';
 import QuoteForm from '@/components/QuoteForm.astro';
 import ServiceCard from '@/components/ServiceCard.astro';
 import TrustStrip from '@/components/TrustStrip.astro';
-import { areas } from '@/data/areas';
+import { areas, areasIn } from '@/data/areas';
+import { provinceBySlug, provinces } from '@/data/provinces';
 import { services } from '@/data/services';
 import { sectors } from '@/data/sectors';
 import { site } from '@/data/site';
@@ -18,10 +19,13 @@ const { a } = Astro.props;
 const path = `/areas/${a.slug}`;
 const svc = a.topServices.map((slug) => services.find((x) => x.slug === slug)!).filter(Boolean);
 const sec = a.topSectors.map((slug) => sectors.find((x) => x.slug === slug)!).filter(Boolean);
-const otherAreas = areas.filter((x) => x.slug !== a.slug);
+const prov = provinceBySlug(a.province)!;
+const otherAreas = areasIn(a.province).filter((x) => x.slug !== a.slug);
+const otherProvinces = provinces.filter((x) => x.slug !== a.province);
+const crumbs = [{ name: 'Areas', path: '/areas' }, { name: prov.name, path: `/${prov.slug}` }, { name: a.name, path }];
 ---
-<Base title={a.seoTitle} description={a.description} path={path} schemas={[serviceSchema(`Security guard services in ${a.name}`, a.description, path, a.name), faq(a.faqs), breadcrumbs([{ name: 'Areas', path: '/areas/vaughan' }, { name: a.name, path }])]}>
-  <PageHero eyebrow={`${a.name} · ${a.region}`} title={a.h1} lead={a.intro[0]} crumbs={[{ name: 'Areas', path: '/areas/vaughan' }, { name: a.name, path }]} dark>
+<Base title={a.seoTitle} description={a.description} path={path} schemas={[serviceSchema(`Security guard services in ${a.name}`, a.description, path, a.name), faq(a.faqs), breadcrumbs(crumbs)]}>
+  <PageHero eyebrow={`${a.region} · ${prov.name}`} title={a.h1} lead={a.intro[0]} crumbs={crumbs} dark>
     <div class="mt-8 flex flex-col gap-3 sm:flex-row">
       <a href={site.phoneHref} class="btn btn-gold">Call {site.phone}</a>
       <a href="#quote" class="btn btn-ghost-light">Get a {a.name} quote</a>
@@ -43,6 +47,12 @@ const otherAreas = areas.filter((x) => x.slug !== a.slug);
         <ul class="mt-5 flex flex-wrap gap-2">
           {a.neighbourhoods.map((n) => <li class="rounded-full border border-line bg-white px-3.5 py-1.5 text-sm">{n}</li>)}
         </ul>
+        <div class="mt-12 rounded-2xl border border-line bg-white p-7">
+          <p class="eyebrow">Licensed in {prov.name}</p>
+          <p class="mt-2 font-serif text-xl">{prov.licence.label}{prov.licence.verified && <> #{prov.licence.number}</>}</p>
+          <p class="mt-2 text-ink-soft">Every guard we send in {a.name} holds {prov.guardLicence}.</p>
+          <a href={`/${prov.slug}`} class="mt-4 inline-flex items-center gap-2 text-sm font-semibold">All of {prov.name} <Icon name="arrow" class="h-4 w-4" /></a>
+        </div>
         {a.primary && (
           <div class="mt-12 rounded-2xl bg-mist p-7">
             <p class="eyebrow">Our office</p>
@@ -79,10 +89,11 @@ const otherAreas = areas.filter((x) => x.slug !== a.slug);
       <div class="mt-8 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
         {sec.map((x) => <a href={`/sectors/${x.slug}`} class="rounded-2xl border border-line bg-white px-5 py-5 font-serif text-lg leading-tight hover:border-ink reveal">{x.name}</a>)}
       </div>
-      <h2 class="mt-14">Other areas we serve</h2>
+      <h2 class="mt-14">Other {prov.name} cities we serve</h2>
       <ul class="mt-6 flex flex-wrap gap-3">
         {otherAreas.map((x) => <li><a href={`/areas/${x.slug}`} class="rounded-full border border-line bg-white px-4 py-2 text-sm font-medium hover:border-ink">Security guards in {x.name}</a></li>)}
       </ul>
+      <p class="mt-6 text-sm text-ink-soft">We also protect {otherProvinces.map((x, i) => <>{i > 0 && ' and '}<a href={`/${x.slug}`} class="font-semibold text-ink underline decoration-gold underline-offset-4">{x.name}</a></>)}.</p>
     </div>
   </section>
 
