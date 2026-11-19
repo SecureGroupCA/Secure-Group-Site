@@ -14,7 +14,7 @@ import { sectors } from '@/data/sectors';
 import { provinces } from '@/data/provinces';
 import { areasIn } from '@/data/areas';
 import { faq } from '@/lib/schema';
-import { onTheJob } from '@/data/photos';
+import { onTheJob, photos } from '@/data/photos';
 
 const faqs = [
   { q: 'How fast can you send a guard?', a: 'In Vaughan and the GTA, often within 2 hours. In other cities, we agree on a start date when you call.' },
@@ -64,6 +64,8 @@ const reviews = [
   <!-- Hero -->
   <section class="relative overflow-hidden bg-ink text-paper">
     <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+      <img src={photos.heroPatrolCar.src} alt="" width="2000" height="1125" fetchpriority="high" class="absolute inset-0 h-full w-full object-cover object-[25%_70%] opacity-30" />
+      <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/60"></div>
       <div class="absolute -right-40 -top-40 h-[34rem] w-[34rem] rounded-full bg-gold/10 blur-3xl"></div>
       <div class="absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
     </div>
@@ -101,7 +103,8 @@ const reviews = [
       <p class="eyebrow">On the job</p>
       <h2 class="mt-3">Real guards. Real sites.</h2>
       <p class="mt-3 max-w-2xl text-ink-soft">These are our own guards and patrols at work. No stock photos.</p>
-      <div class="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
+      <img src={photos.heroPatrolCar.src} alt={photos.heroPatrolCar.alt} width="2000" height="1125" loading="lazy" class="mt-10 aspect-[21/9] w-full rounded-2xl object-cover object-[30%_65%]" />
+      <div class="mt-3 grid grid-cols-2 gap-3 md:grid-cols-4">
         {onTheJob.map((p) => <img src={p.src} alt={p.alt} width="640" height="640" loading="lazy" class="aspect-square w-full rounded-2xl object-cover" />)}
       </div>
     </div>

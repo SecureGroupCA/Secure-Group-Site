@@ -95,7 +95,7 @@ export const services: Service[] = [
   },
   {
     slug: 'construction-site-security',
-    photo: photos.constructionFence,
+    photo: photos.signGateTownhomes,
     group: 'guarding',
     name: 'Construction Site Security',
     short: 'Guards and cameras that stop theft, trespassing and vandalism on your job site.',
@@ -132,7 +132,7 @@ export const services: Service[] = [
   },
   {
     slug: 'condo-security',
-    photo: photos.condoLobby,
+    photo: photos.conciergeDesk,
     group: 'guarding',
     name: 'Condo & Building Security',
     short: 'Friendly, professional guards for your lobby, parking garage and common areas.',
@@ -281,7 +281,7 @@ export const services: Service[] = [
   },
   {
     slug: 'alarm-response',
-    photo: photos.patrolCarOpenLot,
+    photo: photos.supervisorPatrolCar,
     group: 'guarding',
     name: 'Alarm Response',
     short: 'When your alarm goes off at 3 a.m., we go so you do not have to.',

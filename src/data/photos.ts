@@ -1,6 +1,7 @@
 /**
  * Real company photos. Older ones come from Instagram (@securegroup, saved 2020) and are 640x640.
- * Newer ones (2023-2024) come from the Social Media folder, are larger, and have had location data removed.
+ * Newer ones (2023-2026) come from the Social Media folder and the owner's "website photos" zip (2026-11-19).
+ * All newer photos are resized and saved without location data. Camera screens were cropped out and a plate blurred.
  * Never use Instagram posts that advertise camera/CCTV monitoring, show pay rates,
  * or show a client's logo or staff faces.
  */
@@ -27,38 +28,52 @@ export const photos = {
   signBarricade: { src: '/images/site-sign-barricade.jpg', alt: 'Secure Group security sign above a barricade at a winter job site' },
   signGate: { src: '/images/site-sign-gate.jpg', alt: 'Secure Group security sign on a site gate downtown' },
   officeGear: { src: '/images/office-vests-hardhats.jpg', alt: 'Secure Group safety vests and hard hats ready at the office' },
+  heroPatrolCar: { src: '/images/hero-patrol-car-sunset.jpg', alt: 'Secure Group security patrol car at sunrise' },
+  teamBriefing: { src: '/images/team-briefing.jpg', alt: 'Secure Group guards in safety vests at a team briefing on a new-home site' },
+  conciergeDesk: { src: '/images/concierge-desk.jpg', alt: 'Secure Group guard at the front desk of a building lobby' },
+  supervisorPatrolCar: { src: '/images/supervisor-patrol-car.jpg', alt: 'Secure Group supervisor patrol car with lights on' },
+  patrolSubdivisionStreet: { src: '/images/patrol-subdivision-street.jpg', alt: 'Secure Group patrol car on a street of new homes under construction' },
+  nightGatePatrol: { src: '/images/night-gate-patrol.jpg', alt: 'Secure Group patrol car checking a construction gate at night' },
+  nightSiteSign: { src: '/images/night-site-sign.jpg', alt: 'Secure Group security sign on a construction fence at night' },
+  signTownhomes: { src: '/images/site-sign-townhomes.jpg', alt: 'Secure Group security sign on the fence of a townhome build' },
+  signDowntown: { src: '/images/site-sign-downtown.jpg', alt: 'Secure Group security sign on a fenced lot near downtown towers in winter' },
+  signCondoGate: { src: '/images/site-sign-condo-gate.jpg', alt: 'Secure Group security sign on the iron gate of a residential building' },
+  signGateTownhomes: { src: '/images/site-sign-gate-townhomes.jpg', alt: 'Secure Group "No Trespassing" sign on the gate of a new townhome site' },
+  signBrickHomes: { src: '/images/site-sign-brick-homes.jpg', alt: 'Secure Group security sign on a fence in front of new brick homes' },
+  signNoTrespassing: { src: '/images/site-sign-no-trespassing.jpg', alt: 'Secure Group "No Trespassing" sign on a construction fence' },
+  signSunset: { src: '/images/site-sign-sunset.jpg', alt: 'Secure Group security sign on a construction site at sunset' },
 } satisfies Record<string, Photo>;
 
 /** Home page "On the job" strip (8 photos, 2 rows of 4). */
 export const onTheJob: Photo[] = [
-  photos.subdivisionPatrol,
-  photos.patrolCarField,
-  photos.signFence,
-  photos.condoLobby,
-  photos.constructionFence,
-  photos.patrolCarNewHomes,
-  photos.signCondoTower,
-  photos.trafficControl,
+  photos.teamBriefing,
+  photos.signGateTownhomes,
+  photos.conciergeDesk,
+  photos.supervisorPatrolCar,
+  photos.nightGatePatrol,
+  photos.signCondoGate,
+  photos.patrolSubdivisionStreet,
+  photos.signNoTrespassing,
 ];
 
-/** About page gallery: every photo except the two team photos used elsewhere on that page and Careers. */
+/** About page gallery: the best 18 (3 rows of 6). */
 export const gallery: Photo[] = [
+  photos.teamBriefing,
+  photos.signGateTownhomes,
+  photos.conciergeDesk,
+  photos.supervisorPatrolCar,
+  photos.nightGatePatrol,
+  photos.signCondoGate,
+  photos.patrolSubdivisionStreet,
+  photos.signSunset,
+  photos.signDowntown,
+  photos.signBrickHomes,
+  photos.nightSiteSign,
+  photos.signTownhomes,
   photos.subdivisionPatrol,
   photos.signFence,
   photos.patrolCarField,
-  photos.condoLobby,
   photos.signCrane,
-  photos.constructionFence,
-  photos.patrolCarNewHomes,
   photos.trafficControl,
   photos.signCondoTower,
-  photos.siteClipboard,
-  photos.patrolCarOpenLot,
-  photos.officeGear,
-  photos.newHomesSite,
-  photos.signBarricade,
-  photos.excavatorSite,
-  photos.signGate,
-  photos.frontDesk,
-  photos.patrolCars,
 ];

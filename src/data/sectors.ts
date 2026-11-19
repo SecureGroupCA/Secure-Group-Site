@@ -17,7 +17,7 @@ export interface Sector {
 export const sectors: Sector[] = [
   {
     slug: 'construction',
-    photo: photos.signCrane,
+    photo: photos.signSunset,
     name: 'Construction',
     short: 'High-rise and low-rise job sites across Ontario, British Columbia and Alberta.',
     seoTitle: 'Construction Site Security Company in Ontario, BC & Alberta | Secure Group',
@@ -36,7 +36,7 @@ export const sectors: Sector[] = [
   },
   {
     slug: 'condos-and-residential',
-    photo: photos.signCondoTower,
+    photo: photos.signCondoGate,
     name: 'Condos & Residential',
     short: 'Lobbies, garages and common areas where residents want to feel safe.',
     seoTitle: 'Condo & Residential Security Guards in Ontario, BC & Alberta | Secure Group',
