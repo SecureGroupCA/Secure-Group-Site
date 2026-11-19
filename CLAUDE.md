@@ -4,7 +4,7 @@ Static Astro site for secure-group.ca. Serves Ontario, British Columbia and Albe
 
 ## Open reminders (tell the owner at the start of the next session, then delete this section when done)
 Added 2026-11-17 at the owner's request. Use simple, grade-5 English.
-1. **Netlify deploys are paused.** The team ran out of build credits. The test site stays online, but changes pushed after that (three provinces, all services in BC/AB, quote email links, Careers hr@ email) are not live until the owner upgrades the Netlify team or the next billing cycle starts. Never upgrade for them. After deploys resume, check the test site shows the latest commit.
+1. **Netlify deploys are paused.** The team ran out of build credits. The test site stays online, but changes pushed after that (three provinces, all services in BC/AB, quote email links, Careers hr@ email) are not live until the owner upgrades the Netlify team or the next billing cycle starts. Never upgrade for them. After deploys resume, check the test site shows commit 231cb24 or later (photos on every page).
 2. **Confirm form emails.** In Gmail, gs@, info@ and hr@ must each click Netlify's confirmation email (check Spam). Then send a TEST quote from /contact and check gs@ and info@ both got it.
 3. Optional only, when the owner asks what is left: BC and Alberta licence numbers (not mandatory to show).
 
