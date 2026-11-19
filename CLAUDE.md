@@ -18,7 +18,8 @@ Added 2026-11-17 at the owner's request. Use simple, grade-5 English.
 - **Never advertise camera monitoring or video monitoring.** The company is not allowed to. Cameras = installation only (homes and businesses). Alarm monitoring (burglar) and fire alarm monitoring are fine and should be promoted.
 - **No prices on service pages.** The owner wants people to call. Blog posts may quote market ranges as education, but never "we charge $X".
 - **Never name the alarm or camera manufacturer or the monitoring station.** The company is a dealer. Only the ULC licence number may be shown (it lives in `src/data/site.ts`).
-- Keep the design minimal: black, warm white, gold accent. No sliders, no stock-photo clutter, no page builders.
+- Keep the design minimal, classy and elegant: black, warm white, gold accent. No sliders, no page builders. One strong photo per page.
+- **Photos:** our own photos for anything showing our guards, uniforms, cars or job sites. Free Unsplash stock (owner approved 2026-11-19) only for buildings, cities and places, never people presented as our staff. No AI-made pictures of guards in our uniform. Sources in `docs/PHOTO-CREDITS.md`. Show the owner new photos before they go on the site.
 
 ## Where things live
 - `src/data/site.ts` — phone, address, hours, licence. Change once, updates everywhere.

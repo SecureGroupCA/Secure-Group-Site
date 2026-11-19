@@ -38,6 +38,7 @@ const crumbs = [{ name: 'Areas', path: '/areas' }, { name: prov.name, path: `/${
   <section class="section">
     <div class="wrap grid gap-14 lg:grid-cols-[1.3fr_1fr]">
       <div>
+        {a.photo && <img src={a.photo.src} alt={a.photo.alt} width="1600" height="1067" loading="eager" class="mb-10 aspect-[16/10] w-full rounded-2xl object-cover" />}
         <div class="prose-plain text-lg">{a.intro.slice(1).map((p) => <p>{p}</p>)}</div>
         <h2 class="mt-12">What we see in {a.name}</h2>
         <ul class="mt-6 space-y-4">

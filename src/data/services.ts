@@ -169,6 +169,7 @@ export const services: Service[] = [
   },
   {
     slug: 'alarm-monitoring',
+    photo: photos.stockHouseNight,
     name: 'Alarm Monitoring',
     group: 'systems',
     short: 'Your burglar alarm is watched 24 hours a day. If it trips, help is sent.',
@@ -206,6 +207,7 @@ export const services: Service[] = [
   },
   {
     slug: 'fire-alarm-monitoring',
+    photo: photos.stockGlassFacade,
     name: 'Fire Alarm Monitoring',
     group: 'systems',
     short: 'Your fire alarm is connected to a station that calls the fire department fast.',
@@ -244,6 +246,7 @@ export const services: Service[] = [
   },
   {
     slug: 'camera-installation',
+    photo: photos.stockCamera,
     name: 'Camera Installation',
     group: 'systems',
     short: 'Security cameras for your home or business, installed right, viewable on your phone.',
@@ -318,6 +321,7 @@ export const services: Service[] = [
   },
   {
     slug: 'investigations',
+    photo: photos.stockRainyStreet,
     group: 'guarding',
     name: 'Investigations & Executive Protection',
     short: 'Private investigators and close protection for people and companies who need discretion.',
@@ -354,6 +358,7 @@ export const services: Service[] = [
   },
   {
     slug: 'clean-up',
+    photo: photos.signBarricade,
     group: 'guarding',
     name: 'Clean-Up Services',
     short: 'After a break-in, a flood or a fire, we help you clean up and secure the site.',

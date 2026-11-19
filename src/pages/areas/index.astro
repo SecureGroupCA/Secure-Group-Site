@@ -6,9 +6,11 @@ import CtaBand from '@/components/CtaBand.astro';
 import { provinces } from '@/data/provinces';
 import { areasIn } from '@/data/areas';
 import { breadcrumbs } from '@/lib/schema';
+import { photos } from '@/data/photos';
 ---
 <Base title="Areas We Serve: Ontario, BC & Alberta | Secure Group Protection Services" description="Secure Group provides licensed security guards and patrols across Ontario, British Columbia and Alberta. Find your province and city." path="/areas" schemas={[breadcrumbs([{ name: 'Areas', path: '/areas' }])]}>
   <PageHero eyebrow="Areas we serve" title="Ontario, British Columbia and Alberta." lead="Licensed guards and patrols in three provinces. Pick yours to see the cities we cover." crumbs={[{ name: 'Areas', path: '/areas' }]} />
+  <section class="wrap pb-12"><img src={photos.stockAreas.src} alt={photos.stockAreas.alt} width="1600" height="900" loading="eager" class="aspect-[21/9] w-full rounded-2xl object-cover" /></section>
 
   <section class="section pt-0">
     <div class="wrap grid gap-6 lg:grid-cols-3">

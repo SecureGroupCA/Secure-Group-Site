@@ -4,11 +4,13 @@ import PageHero from '@/components/PageHero.astro';
 import CtaBand from '@/components/CtaBand.astro';
 import { getCollection } from 'astro:content';
 import { breadcrumbs } from '@/lib/schema';
+import { photos } from '@/data/photos';
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
 const fmt = (d: Date) => d.toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' });
 ---
 <Base title="Security Blog: Prices, Hiring Tips & Local Advice for Ontario, BC & Alberta | Secure Group" description="Plain-language guides on security guard prices, how to hire a security company, construction site security, condo security and more for Ontario, British Columbia and Alberta." schemas={[breadcrumbs([{ name: 'Blog', path: '/blog' }])]}>
   <PageHero eyebrow="Blog" title="Straight answers about security." lead="Prices, laws, and what actually works. Written in plain English for property managers, builders and business owners in Ontario, BC and Alberta." crumbs={[{ name: 'Blog', path: '/blog' }]} />
+  <section class="wrap pb-12"><img src={photos.teamBriefing.src} alt={photos.teamBriefing.alt} width="1600" height="900" loading="eager" class="aspect-[21/9] w-full rounded-2xl object-cover" /></section>
   <section class="wrap pb-20">
     <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {posts.map((p) => (

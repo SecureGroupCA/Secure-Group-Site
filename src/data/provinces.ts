@@ -1,4 +1,5 @@
 import { site } from './site';
+import { photos, type Photo } from './photos';
 
 export type ProvinceSlug = 'ontario' | 'british-columbia' | 'alberta';
 
@@ -16,6 +17,7 @@ export interface Province {
   topServices: string[];    // service slugs
   topSectors: string[];     // sector slugs
   faqs: { q: string; a: string }[];
+  photo: Photo;
 }
 
 /**
@@ -26,6 +28,7 @@ export interface Province {
 export const provinces: Province[] = [
   {
     slug: 'ontario',
+    photo: photos.stockOntario,
     name: 'Ontario',
     short: 'ON',
     seoTitle: 'Security Guard Company in Ontario | Secure Group Protection Services',
@@ -50,6 +53,7 @@ export const provinces: Province[] = [
   },
   {
     slug: 'british-columbia',
+    photo: photos.stockBC,
     name: 'British Columbia',
     short: 'BC',
     seoTitle: 'Security Guard Company in British Columbia | Secure Group Protection Services',
@@ -74,6 +78,7 @@ export const provinces: Province[] = [
   },
   {
     slug: 'alberta',
+    photo: photos.stockAlberta,
     name: 'Alberta',
     short: 'AB',
     seoTitle: 'Security Guard Company in Alberta | Secure Group Protection Services',

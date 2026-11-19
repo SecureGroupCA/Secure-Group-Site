@@ -5,7 +5,8 @@
  * Never use Instagram posts that advertise camera/CCTV monitoring, show pay rates,
  * or show a client's logo or staff faces.
  */
-export interface Photo { src: string; alt: string }
+/** stock: true = free Unsplash photo (see docs/PHOTO-CREDITS.md). Never show stock as our own staff or job sites. */
+export interface Photo { src: string; alt: string; stock?: boolean }
 
 export const photos = {
   teamUniform: { src: '/images/team-uniform.jpg', alt: 'Six Secure Group guards in uniform and hard hats standing in front of a building' },
@@ -42,6 +43,38 @@ export const photos = {
   signBrickHomes: { src: '/images/site-sign-brick-homes.jpg', alt: 'Secure Group security sign on a fence in front of new brick homes' },
   signNoTrespassing: { src: '/images/site-sign-no-trespassing.jpg', alt: 'Secure Group "No Trespassing" sign on a construction fence' },
   signSunset: { src: '/images/site-sign-sunset.jpg', alt: 'Secure Group security sign on a construction site at sunset' },
+  stockOntario: { src: '/images/stock/stock-ontario-toronto-dusk.jpg', alt: 'Toronto skyline with the CN Tower at dusk', stock: true },
+  stockToronto: { src: '/images/stock/stock-toronto-night.jpg', alt: 'Toronto skyline at night across the harbour', stock: true },
+  stockBC: { src: '/images/stock/stock-bc-vancouver-harbour.jpg', alt: 'Vancouver skyline and harbour', stock: true },
+  stockVancouver: { src: '/images/stock/stock-vancouver-aerial.jpg', alt: 'Aerial view of downtown Vancouver and the mountains', stock: true },
+  stockAreas: { src: '/images/stock/stock-areas-vancouver-reflection.jpg', alt: 'City skyline reflected in calm water', stock: true },
+  stockSurrey: { src: '/images/stock/stock-surrey-bridge.jpg', alt: 'Highway bridge in Metro Vancouver with mountains behind', stock: true },
+  stockBurnaby: { src: '/images/stock/stock-burnaby-towers.jpg', alt: 'Burnaby towers under a dramatic sky', stock: true },
+  stockRichmond: { src: '/images/stock/stock-richmond-mountains.jpg', alt: 'Richmond, BC with snow-capped mountains behind', stock: true },
+  stockFraserValley: { src: '/images/stock/stock-fraser-valley.jpg', alt: 'Fraser Valley farmland with mountains', stock: true },
+  stockKelowna: { src: '/images/stock/stock-kelowna-waterfront.jpg', alt: 'Kelowna waterfront on Okanagan Lake', stock: true },
+  stockVictoria: { src: '/images/stock/stock-victoria-harbour.jpg', alt: 'Victoria Inner Harbour at sunset', stock: true },
+  stockAlberta: { src: '/images/stock/stock-alberta-calgary-river.jpg', alt: 'Calgary skyline above the Bow River', stock: true },
+  stockCalgary: { src: '/images/stock/stock-calgary-night.jpg', alt: 'Calgary skyline at night', stock: true },
+  stockEdmonton: { src: '/images/stock/stock-edmonton-night.jpg', alt: 'Edmonton skyline at night', stock: true },
+  stockPrairieGrass: { src: '/images/stock/stock-prairie-grass.jpg', alt: 'Prairie grass in Central Alberta', stock: true },
+  stockPrairieBarn: { src: '/images/stock/stock-prairie-barn.jpg', alt: 'Old barn on the Alberta prairie at golden hour', stock: true },
+  stockOttawa: { src: '/images/stock/stock-ottawa-parliament.jpg', alt: 'Parliament Hill in Ottawa', stock: true },
+  stockHamilton: { src: '/images/stock/stock-hamilton-skyline.jpg', alt: 'Hamilton skyline at sunset', stock: true },
+  stockLondon: { src: '/images/stock/stock-london-river.jpg', alt: 'London, Ontario skyline over the river', stock: true },
+  stockWaterloo: { src: '/images/stock/stock-waterloo-river.jpg', alt: 'Modern buildings beside the river in Waterloo Region', stock: true },
+  stockBarrie: { src: '/images/stock/stock-barrie-bay.jpg', alt: 'Kempenfelt Bay in Barrie', stock: true },
+  stockHotel: { src: '/images/stock/stock-hotel-lobby.jpg', alt: 'Elegant hotel lobby with a gold chandelier', stock: true },
+  stockHospital: { src: '/images/stock/stock-hospital.jpg', alt: 'Modern hospital building', stock: true },
+  stockMall: { src: '/images/stock/stock-mall.jpg', alt: 'Bright shopping mall with escalators', stock: true },
+  stockGovernment: { src: '/images/stock/stock-government-columns.jpg', alt: 'Classic public building with white columns', stock: true },
+  stockLaw: { src: '/images/stock/stock-law-columns.jpg', alt: 'Stone columns of a courthouse seen from below', stock: true },
+  stockCamera: { src: '/images/stock/stock-security-camera.jpg', alt: 'Security camera mounted on a building wall', stock: true },
+  stockHouseNight: { src: '/images/stock/stock-house-night.jpg', alt: 'Modern home lit up at night', stock: true },
+  stockGlassFacade: { src: '/images/stock/stock-glass-facade.jpg', alt: 'Glass facade of a commercial building', stock: true },
+  stockGlassTower: { src: '/images/stock/stock-glass-tower-sky.jpg', alt: 'Glass office tower against a blue sky', stock: true },
+  stockRainyStreet: { src: '/images/stock/stock-rainy-night-street.jpg', alt: 'Quiet city street at night after rain', stock: true },
+  stockWetRoad: { src: '/images/stock/stock-wet-road-night.jpg', alt: 'Wet city road at night with reflections', stock: true },
 } satisfies Record<string, Photo>;
 
 /** Home page "On the job" strip (8 photos, 2 rows of 4). */

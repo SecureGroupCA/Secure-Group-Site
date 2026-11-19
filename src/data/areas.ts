@@ -1,4 +1,5 @@
 import type { ProvinceSlug } from './provinces';
+import { photos, type Photo } from './photos';
 
 export interface Area {
   slug: string;
@@ -16,11 +17,13 @@ export interface Area {
   topSectors: string[];   // sector slugs
   faqs: { q: string; a: string }[];
   responseTime: string;
+  photo?: Photo;          // shown at the top of the city page
 }
 
 export const areas: Area[] = [
   {
     slug: 'vaughan',
+    photo: photos.patrolSubdivisionStreet,
     name: 'Vaughan',
     region: 'York Region',
     province: 'ontario',
@@ -52,6 +55,7 @@ export const areas: Area[] = [
   },
   {
     slug: 'mississauga',
+    photo: photos.supervisorPatrolCar,
     name: 'Mississauga',
     region: 'Peel Region',
     province: 'ontario',
@@ -78,6 +82,7 @@ export const areas: Area[] = [
   },
   {
     slug: 'bradford',
+    photo: photos.newHomesSite,
     name: 'Bradford',
     region: 'Simcoe County',
     province: 'ontario',
@@ -104,6 +109,7 @@ export const areas: Area[] = [
   },
   {
     slug: 'toronto',
+    photo: photos.stockToronto,
     name: 'Toronto',
     region: 'City of Toronto',
     province: 'ontario',
@@ -130,6 +136,7 @@ export const areas: Area[] = [
   },
   {
     slug: 'brampton',
+    photo: photos.nightGatePatrol,
     name: 'Brampton',
     region: 'Peel Region',
     province: 'ontario',
@@ -155,6 +162,7 @@ export const areas: Area[] = [
   },
   {
     slug: 'markham',
+    photo: photos.signCondoGate,
     name: 'Markham',
     region: 'York Region',
     province: 'ontario',
@@ -180,6 +188,7 @@ export const areas: Area[] = [
   },
   {
     slug: 'richmond-hill',
+    photo: photos.conciergeDesk,
     name: 'Richmond Hill',
     region: 'York Region',
     province: 'ontario',
@@ -206,6 +215,7 @@ export const areas: Area[] = [
   // ───────────── Ontario: beyond the GTA ─────────────
   {
     slug: 'ottawa',
+    photo: photos.stockOttawa,
     name: 'Ottawa',
     region: 'Eastern Ontario',
     province: 'ontario',
@@ -232,6 +242,7 @@ export const areas: Area[] = [
   },
   {
     slug: 'hamilton',
+    photo: photos.stockHamilton,
     name: 'Hamilton',
     region: 'Golden Horseshoe',
     province: 'ontario',
@@ -258,6 +269,7 @@ export const areas: Area[] = [
   },
   {
     slug: 'london',
+    photo: photos.stockLondon,
     name: 'London',
     region: 'Southwestern Ontario',
     province: 'ontario',
@@ -284,6 +296,7 @@ export const areas: Area[] = [
   },
   {
     slug: 'kitchener-waterloo',
+    photo: photos.stockWaterloo,
     name: 'Kitchener-Waterloo',
     region: 'Waterloo Region',
     province: 'ontario',
@@ -310,6 +323,7 @@ export const areas: Area[] = [
   },
   {
     slug: 'barrie',
+    photo: photos.stockBarrie,
     name: 'Barrie',
     region: 'Simcoe County',
     province: 'ontario',
@@ -338,6 +352,7 @@ export const areas: Area[] = [
   // ───────────── British Columbia ─────────────
   {
     slug: 'vancouver',
+    photo: photos.stockVancouver,
     name: 'Vancouver',
     region: 'Metro Vancouver',
     province: 'british-columbia',
@@ -364,6 +379,7 @@ export const areas: Area[] = [
   },
   {
     slug: 'surrey',
+    photo: photos.stockSurrey,
     name: 'Surrey',
     region: 'Metro Vancouver',
     province: 'british-columbia',
@@ -390,6 +406,7 @@ export const areas: Area[] = [
   },
   {
     slug: 'burnaby',
+    photo: photos.stockBurnaby,
     name: 'Burnaby',
     region: 'Metro Vancouver',
     province: 'british-columbia',
@@ -416,6 +433,7 @@ export const areas: Area[] = [
   },
   {
     slug: 'richmond-bc',
+    photo: photos.stockRichmond,
     name: 'Richmond',
     region: 'Metro Vancouver',
     province: 'british-columbia',
@@ -442,6 +460,7 @@ export const areas: Area[] = [
   },
   {
     slug: 'abbotsford',
+    photo: photos.stockFraserValley,
     name: 'Abbotsford',
     region: 'Fraser Valley',
     province: 'british-columbia',
@@ -468,6 +487,7 @@ export const areas: Area[] = [
   },
   {
     slug: 'kelowna',
+    photo: photos.stockKelowna,
     name: 'Kelowna',
     region: 'Okanagan',
     province: 'british-columbia',
@@ -494,6 +514,7 @@ export const areas: Area[] = [
   },
   {
     slug: 'victoria',
+    photo: photos.stockVictoria,
     name: 'Victoria',
     region: 'Vancouver Island',
     province: 'british-columbia',
@@ -522,6 +543,7 @@ export const areas: Area[] = [
   // ───────────── Alberta ─────────────
   {
     slug: 'calgary',
+    photo: photos.stockCalgary,
     name: 'Calgary',
     region: 'Southern Alberta',
     province: 'alberta',
@@ -548,6 +570,7 @@ export const areas: Area[] = [
   },
   {
     slug: 'edmonton',
+    photo: photos.stockEdmonton,
     name: 'Edmonton',
     region: 'Northern Alberta',
     province: 'alberta',
@@ -574,6 +597,7 @@ export const areas: Area[] = [
   },
   {
     slug: 'red-deer',
+    photo: photos.stockPrairieGrass,
     name: 'Red Deer',
     region: 'Central Alberta',
     province: 'alberta',
@@ -599,6 +623,7 @@ export const areas: Area[] = [
   },
   {
     slug: 'lethbridge',
+    photo: photos.stockPrairieBarn,
     name: 'Lethbridge',
     region: 'Southern Alberta',
     province: 'alberta',

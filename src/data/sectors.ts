@@ -74,6 +74,7 @@ export const sectors: Sector[] = [
   },
   {
     slug: 'retail',
+    photo: photos.stockMall,
     name: 'Retail',
     short: 'Loss prevention and a safe feeling for staff and shoppers.',
     seoTitle: 'Retail Security Guards & Loss Prevention in Ontario, BC & Alberta | Secure Group',
@@ -111,6 +112,7 @@ export const sectors: Sector[] = [
   },
   {
     slug: 'government',
+    photo: photos.stockGovernment,
     name: 'Government Facilities',
     short: 'Access control and visitor screening for public buildings.',
     seoTitle: 'Security for Government & Public Facilities in Ontario, BC & Alberta | Secure Group',
@@ -128,6 +130,7 @@ export const sectors: Sector[] = [
   },
   {
     slug: 'health-care',
+    photo: photos.stockHospital,
     name: 'Health Care',
     short: 'Calm, trained guards for clinics, pharmacies and care homes.',
     seoTitle: 'Health Care Security Guards in Ontario, BC & Alberta | Secure Group',
@@ -163,6 +166,7 @@ export const sectors: Sector[] = [
   },
   {
     slug: 'hospitality',
+    photo: photos.stockHotel,
     name: 'Hospitality',
     short: 'Hotels, banquet halls and events that stay welcoming and safe.',
     seoTitle: 'Hotel & Event Security in Ontario, BC & Alberta | Secure Group',
@@ -180,6 +184,7 @@ export const sectors: Sector[] = [
   },
   {
     slug: 'law-firms',
+    photo: photos.stockLaw,
     name: 'Law Firms',
     short: 'Discreet security and investigations for legal offices.',
     seoTitle: 'Security & Investigations for Law Firms in Ontario, BC & Alberta | Secure Group',

@@ -36,6 +36,7 @@ const crumbs = [{ name: 'Areas', path: '/areas' }, { name: p.name, path }];
   <section class="section">
     <div class="wrap grid gap-14 lg:grid-cols-[1.3fr_1fr]">
       <div>
+        <img src={p.photo.src} alt={p.photo.alt} width="1600" height="1067" loading="eager" class="mb-10 aspect-[16/10] w-full rounded-2xl object-cover" />
         <div class="prose-plain text-lg">{p.intro.map((t) => <p>{t}</p>)}</div>
 
         <div class="mt-10 rounded-2xl bg-mist p-7">
